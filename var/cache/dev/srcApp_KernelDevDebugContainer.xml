@@ -258,7 +258,7 @@
       <parameter key="main" type="collection">
         <parameter key="items" type="collection">
           <parameter key="Region" type="collection">
-            <parameter key="label">Regions</parameter>
+            <parameter key="label">Régions</parameter>
             <parameter key="route">liste_region</parameter>
             <parameter key="is_divider">false</parameter>
             <parameter key="route_parameters" type="collection"/>
@@ -266,7 +266,7 @@
             <parameter key="items" type="collection"/>
           </parameter>
           <parameter key="Rooms" type="collection">
-            <parameter key="label">Rooms</parameter>
+            <parameter key="label">Chambres</parameter>
             <parameter key="route">room_index</parameter>
             <parameter key="is_divider">false</parameter>
             <parameter key="route_parameters" type="collection"/>
@@ -274,42 +274,21 @@
             <parameter key="items" type="collection"/>
           </parameter>
           <parameter key="account" type="collection">
-            <parameter key="label">Account</parameter>
+            <parameter key="label">Mon compte</parameter>
             <parameter key="items" type="collection">
               <parameter key="login" type="collection">
-                <parameter key="label">Login</parameter>
+                <parameter key="label">Se connecter</parameter>
                 <parameter key="route">app_login</parameter>
                 <parameter key="is_divider">false</parameter>
                 <parameter key="route_parameters" type="collection"/>
                 <parameter key="roles" type="collection"/>
               </parameter>
               <parameter key="register" type="collection">
-                <parameter key="label">Register</parameter>
+                <parameter key="label">S'inscrire</parameter>
                 <parameter key="route">home</parameter>
                 <parameter key="is_divider">false</parameter>
                 <parameter key="route_parameters" type="collection"/>
                 <parameter key="roles" type="collection"/>
-              </parameter>
-            </parameter>
-            <parameter key="is_divider">false</parameter>
-            <parameter key="route_parameters" type="collection"/>
-            <parameter key="roles" type="collection"/>
-          </parameter>
-        </parameter>
-      </parameter>
-      <parameter key="account" type="collection">
-        <parameter key="items" type="collection">
-          <parameter key="account" type="collection">
-            <parameter key="label">Account</parameter>
-            <parameter key="items" type="collection">
-              <parameter key="logout" type="collection">
-                <parameter key="label">Logout</parameter>
-                <parameter key="route">app_logout</parameter>
-                <parameter key="roles" type="collection">
-                  <parameter>ROLE_USER</parameter>
-                </parameter>
-                <parameter key="is_divider">false</parameter>
-                <parameter key="route_parameters" type="collection"/>
               </parameter>
             </parameter>
             <parameter key="is_divider">false</parameter>

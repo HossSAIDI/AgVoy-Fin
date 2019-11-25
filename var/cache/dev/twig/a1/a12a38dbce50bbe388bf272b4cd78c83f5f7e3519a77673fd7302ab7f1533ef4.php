@@ -63,6 +63,6 @@ class __TwigTemplate_691402027cde4252c85e7ed05162cdf0ff68171f8ed84c1b346a06f77af
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->block(\$form, 'choice_widget_options') ?>
-", "@Framework/Form/choice_options.html.php", "/home/houssem_saidi/CSC4101/AgVoy/vendor/symfony/framework-bundle/Resources/views/Form/choice_options.html.php");
+", "@Framework/Form/choice_options.html.php", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/symfony/framework-bundle/Resources/views/Form/choice_options.html.php");
     }
 }

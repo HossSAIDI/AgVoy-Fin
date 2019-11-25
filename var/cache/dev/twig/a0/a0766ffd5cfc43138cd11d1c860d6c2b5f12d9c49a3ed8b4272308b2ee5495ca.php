@@ -111,6 +111,6 @@ class __TwigTemplate_c1197a148f013cc1ade8468fab7399d4e36e9d84588759381b863bc33c1
         Sfjs.loadToolbar('{{ token }}');
     })();
 /*]]>*/</script>
-", "@WebProfiler/Profiler/toolbar_js.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/toolbar_js.html.twig");
+", "@WebProfiler/Profiler/toolbar_js.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/toolbar_js.html.twig");
     }
 }

@@ -108,6 +108,6 @@ class __TwigTemplate_11f7c618a87d2473fbfcfa01bf0ae46e3cd87dc0c369fce200a0f4cf544
     </exception>
 {% endfor %}
 </error>
-", "@Twig/Exception/exception.xml.twig", "/home/houssem_saidi/CSC4101/AgVoy/vendor/symfony/twig-bundle/Resources/views/Exception/exception.xml.twig");
+", "@Twig/Exception/exception.xml.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/symfony/twig-bundle/Resources/views/Exception/exception.xml.twig");
     }
 }

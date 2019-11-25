@@ -124,6 +124,6 @@ class __TwigTemplate_3ff631a46a806e016fa1f5d2db99a83b4fb7c9cabfae077167a4dcfb1be
     \t<li><a href=\"{{ path('room_new') }}\">Create new room</a></li>
     </ul>
 {% endblock %}
-", "profile/profile.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/templates/profile/profile.html.twig");
+", "profile/profile.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/profile/profile.html.twig");
     }
 }

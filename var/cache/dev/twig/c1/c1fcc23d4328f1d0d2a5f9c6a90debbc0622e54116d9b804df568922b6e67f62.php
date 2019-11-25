@@ -156,6 +156,6 @@ class __TwigTemplate_4655c5d5d0d546acfce35722f55befe21cdb08201cde1dfadf6da634bd5
     <h2>{{ messages[about].title }}</h2>
     <p>{{ messages[about].message }}</p>
 {% endblock %}
-", "@WebProfiler/Profiler/info.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/info.html.twig");
+", "@WebProfiler/Profiler/info.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/info.html.twig");
     }
 }

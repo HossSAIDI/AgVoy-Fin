@@ -1175,6 +1175,6 @@ class __TwigTemplate_fed7c733876a2b239f4b23e5650f57bf04723aa8861bdad529a2e8ea194
         <span>{{ route|default(controller) }}</span>
     {%- endif %}
 {% endmacro %}
-", "@WebProfiler/Collector/request.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/vendor/symfony/web-profiler-bundle/Resources/views/Collector/request.html.twig");
+", "@WebProfiler/Collector/request.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/symfony/web-profiler-bundle/Resources/views/Collector/request.html.twig");
     }
 }

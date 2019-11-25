@@ -24,11 +24,15 @@ class __TwigTemplate_19c665c283961461a1917b582805dd3c250ae81d1c3b0b2e33d05905bba
 
         $this->source = $this->getSourceContext();
 
-        $this->parent = false;
-
         $this->blocks = [
             'body' => [$this, 'block_body'],
         ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 1
+        return "base.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -40,14 +44,8 @@ class __TwigTemplate_19c665c283961461a1917b582805dd3c250ae81d1c3b0b2e33d05905bba
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "comment/index.html.twig"));
 
-        // line 1
-        echo "<!DOCTYPE html>
-
-<title>Comment index</title>
-
-";
-        // line 5
-        $this->displayBlock('body', $context, $blocks);
+        $this->parent = $this->loadTemplate("base.html.twig", "comment/index.html.twig", 1);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -56,6 +54,7 @@ class __TwigTemplate_19c665c283961461a1917b582805dd3c250ae81d1c3b0b2e33d05905bba
 
     }
 
+    // line 2
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -65,8 +64,9 @@ class __TwigTemplate_19c665c283961461a1917b582805dd3c250ae81d1c3b0b2e33d05905bba
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
-        echo "    <h1>Comment index</h1>
+        // line 3
+        echo "<title>Comment index</title>
+    <h1>Comment index</h1>
 
     <table class=\"table\">
         <thead>
@@ -78,29 +78,29 @@ class __TwigTemplate_19c665c283961461a1917b582805dd3c250ae81d1c3b0b2e33d05905bba
         </thead>
         <tbody>
         ";
-        // line 17
+        // line 15
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["comments"] ?? null));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["comment"]) {
-            // line 18
+            // line 16
             echo "            <tr>
                 <td>";
-            // line 19
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "commentary", [], "any", false, false, false, 19), "html", null, true);
+            // line 17
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "commentary", [], "any", false, false, false, 17), "html", null, true);
             echo "</td>
                 <td>";
-            // line 20
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "grade", [], "any", false, false, false, 20), "html", null, true);
+            // line 18
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "grade", [], "any", false, false, false, 18), "html", null, true);
             echo "</td>
                 <td>
                     <a href=\"";
-            // line 22
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_show", ["id" => twig_get_attribute($this->env, $this->source, $context["comment"], "id", [], "any", false, false, false, 22)]), "html", null, true);
+            // line 20
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_show", ["id" => twig_get_attribute($this->env, $this->source, $context["comment"], "id", [], "any", false, false, false, 20)]), "html", null, true);
             echo "\">show</a>
                     <a href=\"";
-            // line 23
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["comment"], "id", [], "any", false, false, false, 23)]), "html", null, true);
+            // line 21
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["comment"], "id", [], "any", false, false, false, 21)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -108,7 +108,7 @@ class __TwigTemplate_19c665c283961461a1917b582805dd3c250ae81d1c3b0b2e33d05905bba
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 27
+            // line 25
             echo "            <tr>
                 <td colspan=\"4\">no records found</td>
             </tr>
@@ -117,12 +117,12 @@ class __TwigTemplate_19c665c283961461a1917b582805dd3c250ae81d1c3b0b2e33d05905bba
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comment'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 31
+        // line 29
         echo "        </tbody>
     </table>
 
     <a href=\"";
-        // line 34
+        // line 32
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_new");
         echo "\">Create new</a>
 ";
@@ -139,18 +139,21 @@ class __TwigTemplate_19c665c283961461a1917b582805dd3c250ae81d1c3b0b2e33d05905bba
         return "comment/index.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  126 => 34,  121 => 31,  112 => 27,  103 => 23,  99 => 22,  94 => 20,  90 => 19,  87 => 18,  82 => 17,  69 => 6,  50 => 5,  44 => 1,);
+        return array (  126 => 32,  121 => 29,  112 => 25,  103 => 21,  99 => 20,  94 => 18,  90 => 17,  87 => 16,  82 => 15,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<!DOCTYPE html>
-
-<title>Comment index</title>
-
+        return new Source("{% extends 'base.html.twig'%}
 {% block body %}
+<title>Comment index</title>
     <h1>Comment index</h1>
 
     <table class=\"table\">
@@ -181,6 +184,6 @@ class __TwigTemplate_19c665c283961461a1917b582805dd3c250ae81d1c3b0b2e33d05905bba
 
     <a href=\"{{ path('comment_new') }}\">Create new</a>
 {% endblock %}
-", "comment/index.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/templates/comment/index.html.twig");
+", "comment/index.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/comment/index.html.twig");
     }
 }

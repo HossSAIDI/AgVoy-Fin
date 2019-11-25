@@ -63,6 +63,6 @@ class __TwigTemplate_c195564eaa0ce640d1ae19b31a365b4387d8292248eb0c9c837cd9c7b3f
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->block(\$form, 'form_widget_simple', ['type' => isset(\$type) ? \$type : 'email']) ?>
-", "@Framework/Form/email_widget.html.php", "/home/houssem_saidi/CSC4101/AgVoy/vendor/symfony/framework-bundle/Resources/views/Form/email_widget.html.php");
+", "@Framework/Form/email_widget.html.php", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/symfony/framework-bundle/Resources/views/Form/email_widget.html.php");
     }
 }

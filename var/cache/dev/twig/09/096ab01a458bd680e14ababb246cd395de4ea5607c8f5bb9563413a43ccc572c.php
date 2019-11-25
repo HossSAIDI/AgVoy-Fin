@@ -75,6 +75,6 @@ class __TwigTemplate_8338cf47b40a8c236537597a84f6a78a209191515ed33178e14af3f66b4
         return new Source("/*
 {{ include('@Twig/Exception/exception.txt.twig', { exception: exception }) }}
 */
-", "@Twig/Exception/exception.css.twig", "/home/houssem_saidi/CSC4101/AgVoy/vendor/symfony/twig-bundle/Resources/views/Exception/exception.css.twig");
+", "@Twig/Exception/exception.css.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/symfony/twig-bundle/Resources/views/Exception/exception.css.twig");
     }
 }

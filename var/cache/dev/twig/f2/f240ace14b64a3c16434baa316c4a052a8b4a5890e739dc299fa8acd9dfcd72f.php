@@ -1289,6 +1289,6 @@ $context["voter_detail"]) && is_array($__internal_01476f8db28655ee4ee02ea2d17dd5
         </table>
     {% endif %}
 {% endblock %}
-", "@Security/Collector/security.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/vendor/symfony/security-bundle/Resources/views/Collector/security.html.twig");
+", "@Security/Collector/security.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/symfony/security-bundle/Resources/views/Collector/security.html.twig");
     }
 }

@@ -133,6 +133,6 @@ class __TwigTemplate_7d76aac1b498500f41b94af6ef03e74c0f4a28d51c6f14410c8b617690c
 
     <a href=\"{{ path('user_index') }}\">back to list</a>
 {% endblock %}
-", "user/new.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/templates/user/new.html.twig");
+", "user/new.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/user/new.html.twig");
     }
 }

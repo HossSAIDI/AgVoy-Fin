@@ -124,6 +124,6 @@ class __TwigTemplate_8b3fa23a90a146a2f83e046a68de1973818e249e417b24b758c53594946
     \t<li><a href=\"{{ path('reservation_new') }}\">Create new reservation</a></li>
     </ul>
 {% endblock %}
-", "profile/profile_client.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/templates/profile/profile_client.html.twig");
+", "profile/profile_client.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/profile/profile_client.html.twig");
     }
 }

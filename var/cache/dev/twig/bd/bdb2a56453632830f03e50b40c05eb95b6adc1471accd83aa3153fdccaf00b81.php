@@ -171,6 +171,6 @@ class __TwigTemplate_c14af6c6a664de20790e3598911212ac63c195b93b2bf9b1d35afd49971
         {%- endfor -%}
     </pre>
 {% endif %}
-", "@Doctrine/Collector/explain.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
+", "@Doctrine/Collector/explain.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
     }
 }

@@ -65,7 +65,7 @@ class __TwigTemplate_a1222d57c61fefb1c1b7a939094882e59f5360117b20ab8d3a5088c9131
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 5
-        echo "    <h1>Room index</h1>
+        echo "    <h1>Découvrez nos chambres</h1>
 
     <table class=\"table\">
         <thead>
@@ -180,7 +180,7 @@ class __TwigTemplate_a1222d57c61fefb1c1b7a939094882e59f5360117b20ab8d3a5088c9131
 
 
 {% block body %}
-    <h1>Room index</h1>
+    <h1>Découvrez nos chambres</h1>
 
     <table class=\"table\">
         <thead>

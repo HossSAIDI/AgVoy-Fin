@@ -122,12 +122,10 @@ class __TwigTemplate_dfe9cc9a219bc5e63e8f0f9208c39caaac5cfa9a9d492633971d719d1ee
     <label for=\"inputPassword\">Password</label>
     <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" required>
 
-    <input type=\"hidden\" name=\"_csrf_token\"
-           value=\"";
-        // line 24
+    <input type=\"hidden\" name=\"_csrf_token\" value=\"";
+        // line 23
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
-        echo "\"
-    >
+        echo "\">
 
 
     <button class=\"btn btn-lg btn-primary\" type=\"submit\">
@@ -135,17 +133,7 @@ class __TwigTemplate_dfe9cc9a219bc5e63e8f0f9208c39caaac5cfa9a9d492633971d719d1ee
     </button>
 </form>
 
-
-
- ";
-        // line 36
-        echo "    <!--  a href=\"/roomsregion\"-->
-      ";
-        // line 38
-        echo "      <!--  a href=\"/roomsregion\">
-        login 
-    </a>-->
-    ";
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -166,7 +154,7 @@ class __TwigTemplate_dfe9cc9a219bc5e63e8f0f9208c39caaac5cfa9a9d492633971d719d1ee
 
     public function getDebugInfo()
     {
-        return array (  145 => 38,  142 => 36,  128 => 24,  120 => 19,  115 => 16,  107 => 13,  104 => 12,  102 => 11,  99 => 10,  93 => 8,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  127 => 23,  120 => 19,  115 => 16,  107 => 13,  104 => 12,  102 => 11,  99 => 10,  93 => 8,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -193,9 +181,7 @@ class __TwigTemplate_dfe9cc9a219bc5e63e8f0f9208c39caaac5cfa9a9d492633971d719d1ee
     <label for=\"inputPassword\">Password</label>
     <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" required>
 
-    <input type=\"hidden\" name=\"_csrf_token\"
-           value=\"{{ csrf_token('authenticate') }}\"
-    >
+    <input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token('authenticate') }}\">
 
 
     <button class=\"btn btn-lg btn-primary\" type=\"submit\">
@@ -203,15 +189,6 @@ class __TwigTemplate_dfe9cc9a219bc5e63e8f0f9208c39caaac5cfa9a9d492633971d719d1ee
     </button>
 </form>
 
-
-
- {#% if is_granted('ROLE_CLIENT')  %#}
-    <!--  a href=\"/roomsregion\"-->
-      {#% elseif is_granted('ROLE_OWNER')%#}
-      <!--  a href=\"/roomsregion\">
-        login 
-    </a>-->
-    {#% endif %#}
 {% endblock %}
 ", "security/login.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/security/login.html.twig");
     }

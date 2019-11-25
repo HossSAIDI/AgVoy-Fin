@@ -9,7 +9,9 @@
         <tbody>
         {% for region in regions %}
             <tr>
-             <td><a href="{{ path('rooms_par_region', {'id': region.id}) }}"> {{ region.name }}</a></td>
+                <td><a href="{{ path('rooms_par_region', {'id': region.id}) }}"> {{ region.name }}</a></td>
+                <td>{{ region.presentation }}</td>
+                <br>
                
                
             </tr>

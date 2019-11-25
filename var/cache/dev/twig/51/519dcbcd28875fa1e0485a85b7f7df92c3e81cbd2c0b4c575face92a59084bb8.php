@@ -67,27 +67,27 @@ class __TwigTemplate_ca60db3c2d8c22abb28b5835eb32203c68eb740992cd4fa2a7b9db2878b
 
  <nav class=\"navbar navbar-expand-lg navbar navbar-dark bg-dark fixed-top\">
                     <div class=\"container\">
-                      <a class=\"navbar-brand\" href=\"/\" >AgVoy</a>
+                      <a class=\"navbar-brand\" href=\"/\" >Le repos des Héros</a>
                       <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarResponsive\" aria-controls=\"navbarResponsive\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                         <span class=\"navbar-toggler-icon\"></span>
                       </button>
+
+                    </div>
   <div class=\"collapse navbar-collapse\" id=\"navbarsMainDefault\">
     <ul class=\"navbar-nav mr-auto\">
                 ";
-        // line 30
+        // line 32
         echo $this->extensions['Camurphy\BootstrapMenuBundle\Twig\Extension\MenuExtension']->renderMenu($this->env, "main");
         echo "
         
     </ul>
   </div>
-   </nav>
+ </nav>
 \t";
-        // line 35
+        // line 37
         $this->displayBlock('body', $context, $blocks);
-        // line 36
-        echo "      
-        
-    </body>
+        // line 38
+        echo "
 ";
         // line 39
         $this->displayBlock('javascripts', $context, $blocks);
@@ -113,7 +113,7 @@ class __TwigTemplate_ca60db3c2d8c22abb28b5835eb32203c68eb740992cd4fa2a7b9db2878b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Welcome!";
+        echo "Bienvenue !";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -173,7 +173,7 @@ class __TwigTemplate_ca60db3c2d8c22abb28b5835eb32203c68eb740992cd4fa2a7b9db2878b
 
     }
 
-    // line 35
+    // line 37
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -232,7 +232,7 @@ class __TwigTemplate_ca60db3c2d8c22abb28b5835eb32203c68eb740992cd4fa2a7b9db2878b
 
     public function getDebugInfo()
     {
-        return array (  212 => 42,  208 => 41,  205 => 40,  195 => 39,  177 => 35,  165 => 14,  162 => 13,  143 => 12,  139 => 11,  136 => 10,  126 => 9,  107 => 8,  95 => 44,  93 => 39,  88 => 36,  86 => 35,  78 => 30,  63 => 17,  61 => 9,  57 => 8,  48 => 1,);
+        return array (  212 => 42,  208 => 41,  205 => 40,  195 => 39,  177 => 37,  165 => 14,  162 => 13,  143 => 12,  139 => 11,  136 => 10,  126 => 9,  107 => 8,  95 => 44,  93 => 39,  90 => 38,  88 => 37,  80 => 32,  63 => 17,  61 => 9,  57 => 8,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -244,7 +244,7 @@ class __TwigTemplate_ca60db3c2d8c22abb28b5835eb32203c68eb740992cd4fa2a7b9db2878b
 <meta charset=\"utf-8\">
 <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
 <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-    <title>{% block title %}Welcome!{% endblock %}</title>
+    <title>{% block title %}Bienvenue !{% endblock %}</title>
     {% block stylesheets %}
     <!-- Bootstrap core CSS -->
 <link href=\"{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}\" rel=\"stylesheet\">
@@ -260,21 +260,21 @@ class __TwigTemplate_ca60db3c2d8c22abb28b5835eb32203c68eb740992cd4fa2a7b9db2878b
 
  <nav class=\"navbar navbar-expand-lg navbar navbar-dark bg-dark fixed-top\">
                     <div class=\"container\">
-                      <a class=\"navbar-brand\" href=\"/\" >AgVoy</a>
+                      <a class=\"navbar-brand\" href=\"/\" >Le repos des Héros</a>
                       <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarResponsive\" aria-controls=\"navbarResponsive\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                         <span class=\"navbar-toggler-icon\"></span>
                       </button>
+
+                    </div>
   <div class=\"collapse navbar-collapse\" id=\"navbarsMainDefault\">
     <ul class=\"navbar-nav mr-auto\">
                 {{ render_bootstrap_menu('main') }}
         
     </ul>
   </div>
-   </nav>
+ </nav>
 \t{% block body %}{% endblock %}
-      
-        
-    </body>
+
 {% block javascripts %}
 <!-- Bootstrap core JavaScript -->
 <script src=\"{{ asset('vendor/jquery/jquery.min.js') }}\"></script>

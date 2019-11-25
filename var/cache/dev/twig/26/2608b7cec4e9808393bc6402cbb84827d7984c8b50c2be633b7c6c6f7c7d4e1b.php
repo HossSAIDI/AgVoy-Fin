@@ -24,11 +24,15 @@ class __TwigTemplate_deceebcd31402222765a0bbae27c6d7a0fe42796513022c9fb83dc1712e
 
         $this->source = $this->getSourceContext();
 
-        $this->parent = false;
-
         $this->blocks = [
             'body' => [$this, 'block_body'],
         ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 1
+        return "base.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -40,14 +44,8 @@ class __TwigTemplate_deceebcd31402222765a0bbae27c6d7a0fe42796513022c9fb83dc1712e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "client/show.html.twig"));
 
-        // line 1
-        echo "<!DOCTYPE html>
-
-<title>Client</title>
-
-";
-        // line 5
-        $this->displayBlock('body', $context, $blocks);
+        $this->parent = $this->loadTemplate("base.html.twig", "client/show.html.twig", 1);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -56,6 +54,7 @@ class __TwigTemplate_deceebcd31402222765a0bbae27c6d7a0fe42796513022c9fb83dc1712e
 
     }
 
+    // line 3
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -65,68 +64,69 @@ class __TwigTemplate_deceebcd31402222765a0bbae27c6d7a0fe42796513022c9fb83dc1712e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
-        echo "    <h1>Client</h1>
+        // line 4
+        echo "<title>Client</title>
+    <h1>Client</h1>
 
     <table class=\"table\">
         <tbody>
             <tr>
                 <th>Firstname</th>
                 <td>";
-        // line 12
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["client"] ?? null), "firstname", [], "any", false, false, false, 12), "html", null, true);
+        // line 11
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["client"] ?? null), "firstname", [], "any", false, false, false, 11), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>FamilyName</th>
                 <td>";
-        // line 16
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["client"] ?? null), "familyName", [], "any", false, false, false, 16), "html", null, true);
+        // line 15
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["client"] ?? null), "familyName", [], "any", false, false, false, 15), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Email</th>
                 <td>";
-        // line 20
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["client"] ?? null), "email", [], "any", false, false, false, 20), "html", null, true);
+        // line 19
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["client"] ?? null), "email", [], "any", false, false, false, 19), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Gender</th>
                 <td>";
-        // line 24
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["client"] ?? null), "gender", [], "any", false, false, false, 24), "html", null, true);
+        // line 23
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["client"] ?? null), "gender", [], "any", false, false, false, 23), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Country</th>
                 <td>";
-        // line 28
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["client"] ?? null), "country", [], "any", false, false, false, 28), "html", null, true);
+        // line 27
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["client"] ?? null), "country", [], "any", false, false, false, 27), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>PhoneNumber</th>
                 <td>";
-        // line 32
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["client"] ?? null), "phoneNumber", [], "any", false, false, false, 32), "html", null, true);
+        // line 31
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["client"] ?? null), "phoneNumber", [], "any", false, false, false, 31), "html", null, true);
         echo "</td>
             </tr>
         </tbody>
     </table>
 
     <a href=\"";
-        // line 37
+        // line 36
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("client_index");
         echo "\">back to list</a>
 
     <a href=\"";
-        // line 39
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("client_edit", ["id" => twig_get_attribute($this->env, $this->source, ($context["client"] ?? null), "id", [], "any", false, false, false, 39)]), "html", null, true);
+        // line 38
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("client_edit", ["id" => twig_get_attribute($this->env, $this->source, ($context["client"] ?? null), "id", [], "any", false, false, false, 38)]), "html", null, true);
         echo "\">edit</a>
 
     ";
-        // line 41
+        // line 40
         echo twig_include($this->env, $context, "client/_delete_form.html.twig");
         echo "
 ";
@@ -143,18 +143,22 @@ class __TwigTemplate_deceebcd31402222765a0bbae27c6d7a0fe42796513022c9fb83dc1712e
         return "client/show.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  130 => 41,  125 => 39,  120 => 37,  112 => 32,  105 => 28,  98 => 24,  91 => 20,  84 => 16,  77 => 12,  69 => 6,  50 => 5,  44 => 1,);
+        return array (  130 => 40,  125 => 38,  120 => 36,  112 => 31,  105 => 27,  98 => 23,  91 => 19,  84 => 15,  77 => 11,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<!DOCTYPE html>
-
-<title>Client</title>
+        return new Source("{% extends 'base.html.twig'%}
 
 {% block body %}
+<title>Client</title>
     <h1>Client</h1>
 
     <table class=\"table\">
@@ -192,6 +196,6 @@ class __TwigTemplate_deceebcd31402222765a0bbae27c6d7a0fe42796513022c9fb83dc1712e
 
     {{ include('client/_delete_form.html.twig') }}
 {% endblock %}
-", "client/show.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/templates/client/show.html.twig");
+", "client/show.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/client/show.html.twig");
     }
 }

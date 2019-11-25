@@ -97,6 +97,6 @@ class __TwigTemplate_6e7975272a453a92dbde78ab6ffd543115200e501f49c8246c336f44a14
         </div>
     </div>
 </div>
-", "@WebProfiler/Profiler/header.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/header.html.twig");
+", "@WebProfiler/Profiler/header.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/header.html.twig");
     }
 }

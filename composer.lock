@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6735fa710d5d7d82867ec6a04e7b62ec",
+    "content-hash": "32307ddb72b0ccacddc1854c0fb353a3",
     "packages": [
         {
             "name": "camurphy/bootstrap-menu-bundle",

@@ -66,7 +66,7 @@ class __TwigTemplate_0b6ac91fed00cb4b0a41a5bfa3aeb839307ec8a6dc51521cbe9eb50acaf
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
         $this->displayParentBlock("title", $context, $blocks);
-        echo " - Welcome";
+        echo " - Bienvenue";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -87,21 +87,21 @@ class __TwigTemplate_0b6ac91fed00cb4b0a41a5bfa3aeb839307ec8a6dc51521cbe9eb50acaf
 
         // line 6
         echo "
-<h1>Welcome</h1>
-<h3>Vous voulez vous enregistrer comme :</h3>
+<h1>Bienvenue</h1>
+<h3>S'incrire en tant que :</h3>
 
 <table type=\"table\">
 <tr>
-<td><a href=\"/register_client\"><button id=\"Regionbtn\">client</a> </button>
-<a href=\"/register\"><button id=\"Regionbtn\">owner</a></button>
+<td><a href=\"/register_client\"><button id=\"Regionbtn\">Client </button></a>
+<a href=\"/register\"><button id=\"Regionbtn\">Propriétaire</button></a>
 </td>
 </tr>
 
 
 </table>
-<h3>Vous avez déja un compte ?</h3>
+<h3>Avez vous déja un compte ?</h3>
 
-<a href=\"/login\"><button id=\"Regionbtn\">login</a></button>
+<a href=\"/login\"><button id=\"Regionbtn\">Se connecter</a></button>
 
 ";
         
@@ -131,25 +131,25 @@ class __TwigTemplate_0b6ac91fed00cb4b0a41a5bfa3aeb839307ec8a6dc51521cbe9eb50acaf
     {
         return new Source("{% extends \"base.html.twig\" %}
 
-{% block title %}{{ parent() }} - Welcome{% endblock %}
+{% block title %}{{ parent() }} - Bienvenue{% endblock %}
 
 {% block body %}
 
-<h1>Welcome</h1>
-<h3>Vous voulez vous enregistrer comme :</h3>
+<h1>Bienvenue</h1>
+<h3>S'incrire en tant que :</h3>
 
 <table type=\"table\">
 <tr>
-<td><a href=\"/register_client\"><button id=\"Regionbtn\">client</a> </button>
-<a href=\"/register\"><button id=\"Regionbtn\">owner</a></button>
+<td><a href=\"/register_client\"><button id=\"Regionbtn\">Client </button></a>
+<a href=\"/register\"><button id=\"Regionbtn\">Propriétaire</button></a>
 </td>
 </tr>
 
 
 </table>
-<h3>Vous avez déja un compte ?</h3>
+<h3>Avez vous déja un compte ?</h3>
 
-<a href=\"/login\"><button id=\"Regionbtn\">login</a></button>
+<a href=\"/login\"><button id=\"Regionbtn\">Se connecter</a></button>
 
 {% endblock %} {# main #}", "/home/home.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/home/home.html.twig");
     }

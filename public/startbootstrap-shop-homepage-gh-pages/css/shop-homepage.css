@@ -6,3 +6,7 @@
 body {
   padding-top: 56px;
 }
+
+#registration_form_agreeTerms {
+  margin-left: 15px;
+}

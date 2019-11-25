@@ -67,6 +67,6 @@ class __TwigTemplate_93e7530da56d6afe25b1a553ec786aea78014033bee2a88bbd8019bbbd7
         return new Source("<div>
     <?php echo \$view['form']->widget(\$form) ?>
 </div>
-", "@Framework/Form/button_row.html.php", "/home/houssem_saidi/CSC4101/AgVoy/vendor/symfony/framework-bundle/Resources/views/Form/button_row.html.php");
+", "@Framework/Form/button_row.html.php", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/symfony/framework-bundle/Resources/views/Form/button_row.html.php");
     }
 }

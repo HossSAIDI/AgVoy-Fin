@@ -413,6 +413,6 @@ class __TwigTemplate_69334562fac4e52e85e4988e3383105cc7131b132209c33d92e632b4aa0
         </div>
     {% endfor %}
 {% endblock %}
-", "@Debug/Profiler/dump.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/vendor/symfony/debug-bundle/Resources/views/Profiler/dump.html.twig");
+", "@Debug/Profiler/dump.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/symfony/debug-bundle/Resources/views/Profiler/dump.html.twig");
     }
 }

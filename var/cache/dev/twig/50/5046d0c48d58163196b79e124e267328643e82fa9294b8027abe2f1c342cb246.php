@@ -72,80 +72,77 @@ class __TwigTemplate_365e05f7f954b3df66301363514f0c0236cae8eb9a9c4e2985b03f3b25b
     <h1>Room</h1>
 
  <table class=\"table\">
-  <thead>
-    <tr>
-      <th scope=\"col\">critaire</th>
-      <th scope=\"col\">value</th>
-  
-    </tr>
-  </thead>
     <tbody>
         <tr>
       \t    <th scope=\"row\">Summary</th>
             <td>";
-        // line 23
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "summary", [], "any", false, false, false, 23), "html", null, true);
+        // line 16
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "summary", [], "any", false, false, false, 16), "html", null, true);
         echo "</td>
         </tr>
         <tr>
             <th scope=\"row\">Description</th>
             <td>";
-        // line 27
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "description", [], "any", false, false, false, 27), "html", null, true);
+        // line 20
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "description", [], "any", false, false, false, 20), "html", null, true);
         echo "</td>
         </tr>
         <tr>
             <th scope=\"row\">Capacity</th>
             <td>";
-        // line 31
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "capacity", [], "any", false, false, false, 31), "html", null, true);
+        // line 24
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "capacity", [], "any", false, false, false, 24), "html", null, true);
         echo "</td>
         </tr>
         <tr>
             <th scope=\"row\">Superficy</th>
             <td>";
-        // line 35
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "superficy", [], "any", false, false, false, 35), "html", null, true);
+        // line 28
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "superficy", [], "any", false, false, false, 28), "html", null, true);
         echo "</td>
         </tr>
         <tr>
             <th scope=\"row\">Price</th>
             <td>";
-        // line 39
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "price", [], "any", false, false, false, 39), "html", null, true);
+        // line 32
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "price", [], "any", false, false, false, 32), "html", null, true);
         echo "</td>
         </tr>
         <tr>
             <th scope=\"row\">Address</th>
             <td>";
-        // line 43
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "address", [], "any", false, false, false, 43), "html", null, true);
+        // line 36
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "address", [], "any", false, false, false, 36), "html", null, true);
         echo "</td>
         </tr>
         <tr>
             <th scope=\"row\">Region</th>
             <td>";
-        // line 47
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "region", [], "any", false, false, false, 47), "html", null, true);
+        // line 40
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "region", [], "any", false, false, false, 40), "html", null, true);
         echo "</td>
         </tr>
     </tbody>
     </table>
 
+    ";
+        // line 45
+        echo twig_include($this->env, $context, "room/_delete_form.html.twig");
+        echo "
+
     <a href=\"";
-        // line 52
+        // line 47
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room_index");
         echo "\">back to list</a>
 
+    <br>
+
     <a href=\"";
-        // line 54
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room_edit", ["id" => twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "id", [], "any", false, false, false, 54)]), "html", null, true);
+        // line 51
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room_edit", ["id" => twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "id", [], "any", false, false, false, 51)]), "html", null, true);
         echo "\">edit</a>
 
-    ";
-        // line 56
-        echo twig_include($this->env, $context, "room/_delete_form.html.twig");
-        echo "
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -167,7 +164,7 @@ class __TwigTemplate_365e05f7f954b3df66301363514f0c0236cae8eb9a9c4e2985b03f3b25b
 
     public function getDebugInfo()
     {
-        return array (  147 => 56,  142 => 54,  137 => 52,  129 => 47,  122 => 43,  115 => 39,  108 => 35,  101 => 31,  94 => 27,  87 => 23,  68 => 6,  58 => 5,  35 => 1,);
+        return array (  142 => 51,  135 => 47,  130 => 45,  122 => 40,  115 => 36,  108 => 32,  101 => 28,  94 => 24,  87 => 20,  80 => 16,  68 => 6,  58 => 5,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -184,13 +181,6 @@ class __TwigTemplate_365e05f7f954b3df66301363514f0c0236cae8eb9a9c4e2985b03f3b25b
     <h1>Room</h1>
 
  <table class=\"table\">
-  <thead>
-    <tr>
-      <th scope=\"col\">critaire</th>
-      <th scope=\"col\">value</th>
-  
-    </tr>
-  </thead>
     <tbody>
         <tr>
       \t    <th scope=\"row\">Summary</th>
@@ -223,13 +213,17 @@ class __TwigTemplate_365e05f7f954b3df66301363514f0c0236cae8eb9a9c4e2985b03f3b25b
     </tbody>
     </table>
 
+    {{ include('room/_delete_form.html.twig') }}
+
     <a href=\"{{ path('room_index') }}\">back to list</a>
+
+    <br>
 
     <a href=\"{{ path('room_edit', {'id': room.id}) }}\">edit</a>
 
-    {{ include('room/_delete_form.html.twig') }}
+
 {% endblock %}
     
-", "room/show.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/templates/room/show.html.twig");
+", "room/show.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/room/show.html.twig");
     }
 }

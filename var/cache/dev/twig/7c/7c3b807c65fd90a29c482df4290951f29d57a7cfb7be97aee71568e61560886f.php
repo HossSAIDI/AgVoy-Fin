@@ -24,11 +24,15 @@ class __TwigTemplate_280e7515709044b4446568447864740311c896f8dd9aaa3d14a19b7de11
 
         $this->source = $this->getSourceContext();
 
-        $this->parent = false;
-
         $this->blocks = [
             'body' => [$this, 'block_body'],
         ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 1
+        return "base.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -40,14 +44,8 @@ class __TwigTemplate_280e7515709044b4446568447864740311c896f8dd9aaa3d14a19b7de11
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "reservation/show.html.twig"));
 
-        // line 1
-        echo "<!DOCTYPE html>
-
-<title>Reservation</title>
-
-";
-        // line 5
-        $this->displayBlock('body', $context, $blocks);
+        $this->parent = $this->loadTemplate("base.html.twig", "reservation/show.html.twig", 1);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -56,6 +54,7 @@ class __TwigTemplate_280e7515709044b4446568447864740311c896f8dd9aaa3d14a19b7de11
 
     }
 
+    // line 2
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -65,8 +64,11 @@ class __TwigTemplate_280e7515709044b4446568447864740311c896f8dd9aaa3d14a19b7de11
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
-        echo "    <h1>Reservation</h1>
+        // line 3
+        echo "
+<title>Reservation</title>
+
+    <h1>Reservation</h1>
 
     <table class=\"table\">
         <tbody>
@@ -122,18 +124,23 @@ class __TwigTemplate_280e7515709044b4446568447864740311c896f8dd9aaa3d14a19b7de11
         return "reservation/show.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  109 => 29,  104 => 27,  99 => 25,  91 => 20,  84 => 16,  77 => 12,  69 => 6,  50 => 5,  44 => 1,);
+        return array (  111 => 29,  106 => 27,  101 => 25,  93 => 20,  86 => 16,  79 => 12,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<!DOCTYPE html>
+        return new Source("{% extends 'base.html.twig'%}
+{% block body %}
 
 <title>Reservation</title>
 
-{% block body %}
     <h1>Reservation</h1>
 
     <table class=\"table\">
@@ -159,6 +166,6 @@ class __TwigTemplate_280e7515709044b4446568447864740311c896f8dd9aaa3d14a19b7de11
 
     {{ include('reservation/_delete_form.html.twig') }}
 {% endblock %}
-", "reservation/show.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/templates/reservation/show.html.twig");
+", "reservation/show.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/reservation/show.html.twig");
     }
 }

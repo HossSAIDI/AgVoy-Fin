@@ -42,7 +42,7 @@ class RegestrationFormClient extends AbstractType
                 ]),
             ],
         ])
-        ->add("clients",ClientType::class)
+        ->add("clients",ClientType::class, ['label' => "Infomations personnelles :"])
         ;
     }
     

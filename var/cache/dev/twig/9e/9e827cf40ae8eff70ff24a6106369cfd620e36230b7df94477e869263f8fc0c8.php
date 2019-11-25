@@ -479,6 +479,6 @@ class __TwigTemplate_b9bccb075412cf7508ed2511b03a4f6fe06048a0b94a7c9cdb7a624e905
         </div>
     {% endfor %}
 {% endblock %}
-", "@WebProfiler/Collector/validator.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/vendor/symfony/web-profiler-bundle/Resources/views/Collector/validator.html.twig");
+", "@WebProfiler/Collector/validator.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/symfony/web-profiler-bundle/Resources/views/Collector/validator.html.twig");
     }
 }

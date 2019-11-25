@@ -1828,6 +1828,6 @@ class __TwigTemplate_2785275f450245970d2f27671a75be46e8bddf43e1b921aec493562354e
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
     }
 }

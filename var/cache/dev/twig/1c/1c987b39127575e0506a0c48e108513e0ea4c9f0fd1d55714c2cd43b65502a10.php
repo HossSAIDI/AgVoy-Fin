@@ -1006,6 +1006,6 @@ class __TwigTemplate_cdadaef58c3c6c154f0955b5479531af85cf6f8b58058e6f42a639979f4
         {% endif %}
     {% endfor %}
 {% endblock %}
-", "@Swiftmailer/Collector/swiftmailer.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/vendor/symfony/swiftmailer-bundle/Resources/views/Collector/swiftmailer.html.twig");
+", "@Swiftmailer/Collector/swiftmailer.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/symfony/swiftmailer-bundle/Resources/views/Collector/swiftmailer.html.twig");
     }
 }

@@ -71,6 +71,6 @@ class __TwigTemplate_ba99a6ec5737be8553364353e9344ae11b2f12bc5bfea823901312206f4
         <?php echo \$view['form']->widget(\$form); ?>
     </td>
 </tr>
-", "@Framework/FormTable/hidden_row.html.php", "/home/houssem_saidi/CSC4101/AgVoy/vendor/symfony/framework-bundle/Resources/views/FormTable/hidden_row.html.php");
+", "@Framework/FormTable/hidden_row.html.php", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/symfony/framework-bundle/Resources/views/FormTable/hidden_row.html.php");
     }
 }

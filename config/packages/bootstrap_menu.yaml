@@ -3,29 +3,17 @@ bootstrap_menu:
     main:
       items:
         Region:
-          label: 'Regions'
+          label: 'Régions'
           route: 'liste_region'
         Rooms:
-          label: 'Rooms'
+          label: 'Chambres'
           route: 'room_index'  
         account:
-          label: 'Account'
+          label: 'Mon compte'
           items:
             login:
-              label: 'Login'
+              label: 'Se connecter'
               route: 'app_login'
             register:
-              label: 'Register'
+              label: "S'inscrire"
               route: 'home'
-     
-
-    account:
-      items:
-        account:
-          label: 'Account'
-          items:
-            logout:
-              label: 'Logout'
-              route: 'app_logout'
-              roles: [ 'ROLE_USER' ]
-          

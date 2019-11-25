@@ -219,6 +219,6 @@ class __TwigTemplate_8bda154010ab48a4c2b2fac05ea0a3f1b53e2f15a63371cdce10695cdbe
 
     <a href=\"{{ path('user_new') }}\">Create new</a>
 {% endblock %}
-", "user/index.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/templates/user/index.html.twig");
+", "user/index.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/user/index.html.twig");
     }
 }

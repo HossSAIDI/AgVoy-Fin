@@ -84,6 +84,6 @@ class __TwigTemplate_1323b95c60927fe34a7734c510d40237e54e467cee4868447e1ec3f18c6
     {{ form_widget(form) }}
     <button class=\"btn\">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
-", "user/_form.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/templates/user/_form.html.twig");
+", "user/_form.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/user/_form.html.twig");
     }
 }

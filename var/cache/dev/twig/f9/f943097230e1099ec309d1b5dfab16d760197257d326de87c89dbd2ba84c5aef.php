@@ -73,6 +73,6 @@ class __TwigTemplate_cd77da35bea69619b0997aca76153ed13042216ed63992cb73731a0b578
         <?php echo \$view['form']->widget(\$form); ?>
     </td>
 </tr>
-", "@Framework/FormTable/button_row.html.php", "/home/houssem_saidi/CSC4101/AgVoy/vendor/symfony/framework-bundle/Resources/views/FormTable/button_row.html.php");
+", "@Framework/FormTable/button_row.html.php", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/symfony/framework-bundle/Resources/views/FormTable/button_row.html.php");
     }
 }

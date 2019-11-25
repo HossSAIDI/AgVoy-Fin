@@ -75,6 +75,6 @@ class __TwigTemplate_46378181a4cfe54af656d15de06d58cd094d216406a782deb95aac28837
     <?php echo \$view['form']->widget(\$form, \$widgetAttr); ?>
     <?php echo \$view['form']->help(\$form); ?>
 </div>
-", "@Framework/Form/form_row.html.php", "/home/houssem_saidi/CSC4101/AgVoy/vendor/symfony/framework-bundle/Resources/views/Form/form_row.html.php");
+", "@Framework/Form/form_row.html.php", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/symfony/framework-bundle/Resources/views/Form/form_row.html.php");
     }
 }

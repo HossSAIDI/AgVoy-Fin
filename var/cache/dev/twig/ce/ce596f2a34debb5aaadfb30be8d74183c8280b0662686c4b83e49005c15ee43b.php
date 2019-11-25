@@ -24,11 +24,15 @@ class __TwigTemplate_254bda5fb671df8b2fe98e74c960501ebcbc09bcde5f154e06f0393d537
 
         $this->source = $this->getSourceContext();
 
-        $this->parent = false;
-
         $this->blocks = [
             'body' => [$this, 'block_body'],
         ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 1
+        return "base.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -40,14 +44,8 @@ class __TwigTemplate_254bda5fb671df8b2fe98e74c960501ebcbc09bcde5f154e06f0393d537
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "comment/edit.html.twig"));
 
-        // line 1
-        echo "<!DOCTYPE html>
-
-<title>Edit Comment</title>
-
-";
-        // line 5
-        $this->displayBlock('body', $context, $blocks);
+        $this->parent = $this->loadTemplate("base.html.twig", "comment/edit.html.twig", 1);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -56,6 +54,7 @@ class __TwigTemplate_254bda5fb671df8b2fe98e74c960501ebcbc09bcde5f154e06f0393d537
 
     }
 
+    // line 2
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -65,8 +64,11 @@ class __TwigTemplate_254bda5fb671df8b2fe98e74c960501ebcbc09bcde5f154e06f0393d537
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
-        echo "    <h1>Edit Comment</h1>
+        // line 3
+        echo "
+
+<title>Edit Comment</title>
+    <h1>Edit Comment</h1>
 
     ";
         // line 8
@@ -96,18 +98,23 @@ class __TwigTemplate_254bda5fb671df8b2fe98e74c960501ebcbc09bcde5f154e06f0393d537
         return "comment/edit.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  83 => 12,  78 => 10,  73 => 8,  69 => 6,  50 => 5,  44 => 1,);
+        return array (  85 => 12,  80 => 10,  75 => 8,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<!DOCTYPE html>
+        return new Source("{% extends 'base.html.twig'%}
+{% block body %}
+
 
 <title>Edit Comment</title>
-
-{% block body %}
     <h1>Edit Comment</h1>
 
     {{ include('comment/_form.html.twig', {'button_label': 'Update'}) }}
@@ -116,6 +123,6 @@ class __TwigTemplate_254bda5fb671df8b2fe98e74c960501ebcbc09bcde5f154e06f0393d537
 
     {{ include('comment/_delete_form.html.twig') }}
 {% endblock %}
-", "comment/edit.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/templates/comment/edit.html.twig");
+", "comment/edit.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/comment/edit.html.twig");
     }
 }

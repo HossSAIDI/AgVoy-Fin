@@ -63,6 +63,6 @@ class __TwigTemplate_49d7dd57616ec5e607c6c64bbebb4e90b292da03c0668c4be658cc1f8ea
     public function getSourceContext()
     {
         return new Source("<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path fill=\"#AAA\" d=\"M12 22.6c-5.8 0-10.5-4.7-10.5-10.5S6.2 1.5 12 1.5 22.5 6.2 22.5 12c0 5.9-4.7 10.6-10.5 10.6zm0-18.1c-4.2 0-7.5 3.4-7.5 7.5 0 4.2 3.4 7.5 7.5 7.5s7.5-3.4 7.5-7.5-3.3-7.5-7.5-7.5z\"/><path fill=\"#AAA\" d=\"M12 9.1c-.8 0-1.5-.7-1.5-1.5v-6c0-.8.7-1.5 1.5-1.5s1.5.7 1.5 1.5v6c0 .8-.7 1.5-1.5 1.5zm1.5 13.3v-6c0-.8-.7-1.5-1.5-1.5s-1.5.7-1.5 1.5v6c0 .8.7 1.5 1.5 1.5s1.5-.7 1.5-1.5zM23.9 12c0-.8-.7-1.5-1.5-1.5h-6c-.8 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5h6c.8 0 1.5-.7 1.5-1.5zM9.1 12c0-.8-.7-1.5-1.5-1.5h-6c-.8 0-1.5.7-1.5 1.5s.7 1.5 1.5 1.5h6c.8 0 1.5-.7 1.5-1.5z\"/></svg>
-", "@Debug/Profiler/icon.svg", "/home/houssem_saidi/CSC4101/AgVoy/vendor/symfony/debug-bundle/Resources/views/Profiler/icon.svg");
+", "@Debug/Profiler/icon.svg", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/symfony/debug-bundle/Resources/views/Profiler/icon.svg");
     }
 }

@@ -81,6 +81,6 @@ class __TwigTemplate_83fa170128d7c56b04f760efdfce835697df6f6a21fedf37bcfd3b91f9f
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ user.id) }}\">
     <button class=\"btn\">Delete</button>
 </form>
-", "user/_delete_form.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/templates/user/_delete_form.html.twig");
+", "user/_delete_form.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/user/_delete_form.html.twig");
     }
 }

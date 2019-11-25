@@ -118,6 +118,6 @@ class __TwigTemplate_a8d935e5e0ffdf2c08dc99c25b5aab15b9a094e983605cb7eaa3d7ef432
 
     <a href=\"{{ path('room_index') }}\">back to list</a>
 {% endblock %}
-", "room/new.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/templates/room/new.html.twig");
+", "room/new.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/room/new.html.twig");
     }
 }

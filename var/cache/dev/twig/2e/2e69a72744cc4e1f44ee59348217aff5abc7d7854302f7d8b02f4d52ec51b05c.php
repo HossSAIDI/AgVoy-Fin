@@ -97,12 +97,17 @@ class __TwigTemplate_98e6109396a1b7bda3b11a2a8d4b1a5f61528473f383f367706ddbbbc17
         foreach ($context['_seq'] as $context["_key"] => $context["region"]) {
             // line 11
             echo "            <tr>
-             <td><a href=\"";
+                <td><a href=\"";
             // line 12
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("rooms_par_region", ["id" => twig_get_attribute($this->env, $this->source, $context["region"], "id", [], "any", false, false, false, 12)]), "html", null, true);
             echo "\"> ";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["region"], "name", [], "any", false, false, false, 12), "html", null, true);
             echo "</a></td>
+                <td>";
+            // line 13
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["region"], "presentation", [], "any", false, false, false, 13), "html", null, true);
+            echo "</td>
+                <br>
                
                
             </tr>
@@ -110,7 +115,7 @@ class __TwigTemplate_98e6109396a1b7bda3b11a2a8d4b1a5f61528473f383f367706ddbbbc17
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 17
+            // line 19
             echo "            <tr>
                 <td colspan=\"5\">no records found</td>
             </tr>
@@ -119,7 +124,7 @@ class __TwigTemplate_98e6109396a1b7bda3b11a2a8d4b1a5f61528473f383f367706ddbbbc17
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['region'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 21
+        // line 23
         echo "        </tbody>
     
 
@@ -145,7 +150,7 @@ class __TwigTemplate_98e6109396a1b7bda3b11a2a8d4b1a5f61528473f383f367706ddbbbc17
 
     public function getDebugInfo()
     {
-        return array (  123 => 21,  114 => 17,  102 => 12,  99 => 11,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  128 => 23,  119 => 19,  108 => 13,  102 => 12,  99 => 11,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -161,7 +166,9 @@ class __TwigTemplate_98e6109396a1b7bda3b11a2a8d4b1a5f61528473f383f367706ddbbbc17
         <tbody>
         {% for region in regions %}
             <tr>
-             <td><a href=\"{{ path('rooms_par_region', {'id': region.id}) }}\"> {{ region.name }}</a></td>
+                <td><a href=\"{{ path('rooms_par_region', {'id': region.id}) }}\"> {{ region.name }}</a></td>
+                <td>{{ region.presentation }}</td>
+                <br>
                
                
             </tr>
@@ -174,6 +181,6 @@ class __TwigTemplate_98e6109396a1b7bda3b11a2a8d4b1a5f61528473f383f367706ddbbbc17
     
 
     
-{% endblock %}", "room_par_region/index.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/templates/room_par_region/index.html.twig");
+{% endblock %}", "room_par_region/index.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/room_par_region/index.html.twig");
     }
 }

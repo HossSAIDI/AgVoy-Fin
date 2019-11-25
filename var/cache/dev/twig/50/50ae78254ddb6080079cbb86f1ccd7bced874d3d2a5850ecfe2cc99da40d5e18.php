@@ -103,12 +103,13 @@ class __TwigTemplate_6e784c396c69dfd513b40aaf6f010f7edce112845a63cb174decc065135
         // line 11
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, ($context["registrationForm"] ?? null), "agreeTerms", [], "any", false, false, false, 11), 'row');
         echo "
-
-        <button class=\"btn\" href=\"/owner/new\">Register</button>
     ";
-        // line 14
+        // line 12
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock(($context["registrationForm"] ?? null), 'form_end');
         echo "
+
+    <button class=\"btn\" href=\"/owner/new\">Register</button>
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -130,7 +131,7 @@ class __TwigTemplate_6e784c396c69dfd513b40aaf6f010f7edce112845a63cb174decc065135
 
     public function getDebugInfo()
     {
-        return array (  110 => 14,  104 => 11,  100 => 10,  96 => 9,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  108 => 12,  104 => 11,  100 => 10,  96 => 9,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -146,10 +147,11 @@ class __TwigTemplate_6e784c396c69dfd513b40aaf6f010f7edce112845a63cb174decc065135
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.plainPassword) }}
         {{ form_row(registrationForm.agreeTerms) }}
-
-        <button class=\"btn\" href=\"/owner/new\">Register</button>
     {{ form_end(registrationForm) }}
+
+    <button class=\"btn\" href=\"/owner/new\">Register</button>
+
 {% endblock %}
-", "registration/register.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/templates/registration/register.html.twig");
+", "registration/register.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/registration/register.html.twig");
     }
 }

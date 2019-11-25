@@ -140,6 +140,6 @@ class __TwigTemplate_bc1f7cac7b9d54e98fce96f9c2367bbd4fb6fbb741e587aaad29d1378cc
 
     {{ include('user/_delete_form.html.twig') }}
 {% endblock %}
-", "user/edit.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/templates/user/edit.html.twig");
+", "user/edit.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/user/edit.html.twig");
     }
 }

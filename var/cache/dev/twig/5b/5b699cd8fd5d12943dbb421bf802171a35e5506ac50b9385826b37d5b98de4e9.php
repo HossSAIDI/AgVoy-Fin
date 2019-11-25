@@ -266,6 +266,6 @@ class __TwigTemplate_fbbd04cefdc6ac1c51597db6135a518dcae47327599afd4385b08b05837
         {{- form_rest(form) -}}
     </table>
 {%- endblock form_widget_compound -%}
-", "form_table_layout.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/vendor/symfony/twig-bridge/Resources/views/Form/form_table_layout.html.twig");
+", "form_table_layout.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/symfony/twig-bridge/Resources/views/Form/form_table_layout.html.twig");
     }
 }

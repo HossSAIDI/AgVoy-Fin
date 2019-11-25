@@ -85,7 +85,7 @@ class __TwigTemplate_2a9728c872d9dbb60bd513cffeb43f8441e329eba95f861ddf52391ff3b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>romms dans la region ";
+        echo "    <h1>Découvrez nos chambres dans la région ";
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["region"] ?? null), "name", [], "any", false, false, false, 6), "html", null, true);
         echo "</h1>
 
@@ -204,7 +204,7 @@ class __TwigTemplate_2a9728c872d9dbb60bd513cffeb43f8441e329eba95f861ddf52391ff3b
 {% block title %}Region{% endblock %}
 
 {% block body %}
-    <h1>romms dans la region {{ region.name }}</h1>
+    <h1>Découvrez nos chambres dans la région {{ region.name }}</h1>
 
     <table class=\"table\">
         <tbody>
@@ -250,6 +250,6 @@ class __TwigTemplate_2a9728c872d9dbb60bd513cffeb43f8441e329eba95f861ddf52391ff3b
   
 {% endblock %}
    
-  ", "room_par_region/show.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/templates/room_par_region/show.html.twig");
+  ", "room_par_region/show.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/room_par_region/show.html.twig");
     }
 }

@@ -24,11 +24,15 @@ class __TwigTemplate_fdaa11a28de902a447ffb3e8d1e3717849be931620a6b66d96d12e9615b
 
         $this->source = $this->getSourceContext();
 
-        $this->parent = false;
-
         $this->blocks = [
             'body' => [$this, 'block_body'],
         ];
+    }
+
+    protected function doGetParent(array $context)
+    {
+        // line 1
+        return "base.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -40,14 +44,8 @@ class __TwigTemplate_fdaa11a28de902a447ffb3e8d1e3717849be931620a6b66d96d12e9615b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "comment/show.html.twig"));
 
-        // line 1
-        echo "<!DOCTYPE html>
-
-<title>Comment</title>
-
-";
-        // line 5
-        $this->displayBlock('body', $context, $blocks);
+        $this->parent = $this->loadTemplate("base.html.twig", "comment/show.html.twig", 1);
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
@@ -56,6 +54,7 @@ class __TwigTemplate_fdaa11a28de902a447ffb3e8d1e3717849be931620a6b66d96d12e9615b
 
     }
 
+    // line 3
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -65,8 +64,10 @@ class __TwigTemplate_fdaa11a28de902a447ffb3e8d1e3717849be931620a6b66d96d12e9615b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
-        echo "    <h1>Comment</h1>
+        // line 4
+        echo "<title>Comment</title>
+
+    <h1>Comment</h1>
 
     <table class=\"table\">
         <tbody>
@@ -115,18 +116,23 @@ class __TwigTemplate_fdaa11a28de902a447ffb3e8d1e3717849be931620a6b66d96d12e9615b
         return "comment/show.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  102 => 25,  97 => 23,  92 => 21,  84 => 16,  77 => 12,  69 => 6,  50 => 5,  44 => 1,);
+        return array (  103 => 25,  98 => 23,  93 => 21,  85 => 16,  78 => 12,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<!DOCTYPE html>
-
-<title>Comment</title>
+        return new Source("{% extends 'base.html.twig'%}
 
 {% block body %}
+<title>Comment</title>
+
     <h1>Comment</h1>
 
     <table class=\"table\">
@@ -148,6 +154,6 @@ class __TwigTemplate_fdaa11a28de902a447ffb3e8d1e3717849be931620a6b66d96d12e9615b
 
     {{ include('comment/_delete_form.html.twig') }}
 {% endblock %}
-", "comment/show.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/templates/comment/show.html.twig");
+", "comment/show.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/comment/show.html.twig");
     }
 }

@@ -10,13 +10,6 @@
     <h1>Room</h1>
 
  <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">critaire</th>
-      <th scope="col">value</th>
-  
-    </tr>
-  </thead>
     <tbody>
         <tr>
       	    <th scope="row">Summary</th>
@@ -49,10 +42,14 @@
     </tbody>
     </table>
 
+    {{ include('room/_delete_form.html.twig') }}
+
     <a href="{{ path('room_index') }}">back to list</a>
+
+    <br>
 
     <a href="{{ path('room_edit', {'id': room.id}) }}">edit</a>
 
-    {{ include('room/_delete_form.html.twig') }}
+
 {% endblock %}
     

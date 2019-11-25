@@ -165,6 +165,6 @@ class __TwigTemplate_ecd87a4088f26a8d6b991c30ef74fa17ae09c3dcdc02e0675e7436aeb82
    <button><a href=\"/reservation/new\" >Make new reservation</a></button>   
           
      
-{% endblock %}", "clientreservationlist/clientreservationlist.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/templates/clientreservationlist/clientreservationlist.html.twig");
+{% endblock %}", "clientreservationlist/clientreservationlist.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/clientreservationlist/clientreservationlist.html.twig");
     }
 }
