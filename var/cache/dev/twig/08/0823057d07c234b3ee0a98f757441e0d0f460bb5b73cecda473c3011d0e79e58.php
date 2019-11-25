@@ -635,6 +635,6 @@ class __TwigTemplate_9369ee0cc0f560574317eb8d246b398f8b10e3fc54569aa0b41cb8ceb21
     });
 
 /*]]>*/</script>
-", "@Twig/base_js.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/vendor/symfony/twig-bundle/Resources/views/base_js.html.twig");
+", "@Twig/base_js.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/symfony/twig-bundle/Resources/views/base_js.html.twig");
     }
 }

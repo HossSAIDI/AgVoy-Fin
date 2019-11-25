@@ -150,6 +150,6 @@ class __TwigTemplate_b5bbd341f64e8a94693ca4b501837d599cf2450d90dae6504839c6f1c76
         <button class=\"btn\">Register</button>
     {{ form_end(registrationForm) }}
 {% endblock %}
-", "registration/register_client.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/templates/registration/register_client.html.twig");
+", "registration/register_client.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/registration/register_client.html.twig");
     }
 }

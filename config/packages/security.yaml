@@ -12,9 +12,10 @@ security:
                 property: email
     role_hierarchy:		
 
-     ROLE_USER: ROLE_USER
+     ROLE_CLIENT: ROLE_USER
      ROLE_ADMIN: [ROLE_OWNER,ROLE_CLIENT]
      ROLE_SUPER_ADMIN: ROLE_ADMIN
+
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
@@ -40,4 +41,3 @@ security:
     access_control:
         - { path: ^/profile, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin, roles: ROLE_ADMIN }
-        - { path: ^/login, roles: ROLE_USER }

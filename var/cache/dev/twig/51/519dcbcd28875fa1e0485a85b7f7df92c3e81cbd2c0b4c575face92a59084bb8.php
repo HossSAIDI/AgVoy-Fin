@@ -282,6 +282,6 @@ class __TwigTemplate_ca60db3c2d8c22abb28b5835eb32203c68eb740992cd4fa2a7b9db2878b
 {% endblock %}
 </body>
 </html>
-", "base.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/templates/base.html.twig");
+", "base.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/base.html.twig");
     }
 }

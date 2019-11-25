@@ -204,6 +204,6 @@ class __TwigTemplate_b3d6e08b2caee87b8ddb917256a007608917fb8f692531059dcfeb34325
         })|raw }}
     </div>
 {% endif %}
-", "@Twig/Exception/trace.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/vendor/symfony/twig-bundle/Resources/views/Exception/trace.html.twig");
+", "@Twig/Exception/trace.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/symfony/twig-bundle/Resources/views/Exception/trace.html.twig");
     }
 }

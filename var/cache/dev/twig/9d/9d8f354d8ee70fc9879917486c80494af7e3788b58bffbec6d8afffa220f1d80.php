@@ -490,6 +490,6 @@ class __TwigTemplate_34e32737cef202a4bc6e235e6a480b6835d0176fb1dd6e5a6e8029ce74b
         {% endif %}
     </div>
 </div>
-", "@Twig/Exception/exception.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/vendor/symfony/twig-bundle/Resources/views/Exception/exception.html.twig");
+", "@Twig/Exception/exception.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/symfony/twig-bundle/Resources/views/Exception/exception.html.twig");
     }
 }

@@ -220,6 +220,6 @@ class __TwigTemplate_a1222d57c61fefb1c1b7a939094882e59f5360117b20ab8d3a5088c9131
 
     <a href=\"{{ path('room_new') }}\">Create new</a>
 {% endblock %}
-", "room/index.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/templates/room/index.html.twig");
+", "room/index.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/room/index.html.twig");
     }
 }

@@ -161,6 +161,6 @@ class __TwigTemplate_a0c796d53bed8d85a9d7e2e1eb3245e08248ce4826623c2100eeb67db32
         </tr>
     </tbody>
 </table>
-", "@Twig/Exception/traces_text.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/vendor/symfony/twig-bundle/Resources/views/Exception/traces_text.html.twig");
+", "@Twig/Exception/traces_text.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/vendor/symfony/twig-bundle/Resources/views/Exception/traces_text.html.twig");
     }
 }

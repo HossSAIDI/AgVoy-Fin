@@ -129,9 +129,7 @@ class __TwigTemplate_dfe9cc9a219bc5e63e8f0f9208c39caaac5cfa9a9d492633971d719d1ee
         echo "\"
     >
 
-    ";
-        // line 37
-        echo "
+
     <button class=\"btn btn-lg btn-primary\" type=\"submit\">
         Sign In
     </button>
@@ -140,10 +138,10 @@ class __TwigTemplate_dfe9cc9a219bc5e63e8f0f9208c39caaac5cfa9a9d492633971d719d1ee
 
 
  ";
-        // line 46
+        // line 36
         echo "    <!--  a href=\"/roomsregion\"-->
       ";
-        // line 48
+        // line 38
         echo "      <!--  a href=\"/roomsregion\">
         login 
     </a>-->
@@ -168,7 +166,7 @@ class __TwigTemplate_dfe9cc9a219bc5e63e8f0f9208c39caaac5cfa9a9d492633971d719d1ee
 
     public function getDebugInfo()
     {
-        return array (  147 => 48,  144 => 46,  134 => 37,  128 => 24,  120 => 19,  115 => 16,  107 => 13,  104 => 12,  102 => 11,  99 => 10,  93 => 8,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  145 => 38,  142 => 36,  128 => 24,  120 => 19,  115 => 16,  107 => 13,  104 => 12,  102 => 11,  99 => 10,  93 => 8,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -199,16 +197,6 @@ class __TwigTemplate_dfe9cc9a219bc5e63e8f0f9208c39caaac5cfa9a9d492633971d719d1ee
            value=\"{{ csrf_token('authenticate') }}\"
     >
 
-    {#
-        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-        See https://symfony.com/doc/current/security/remember_me.html
-
-        <div class=\"checkbox mb-3\">
-            <label>
-                <input type=\"checkbox\" name=\"_remember_me\"> Remember me
-            </label>
-        </div>
-    #}
 
     <button class=\"btn btn-lg btn-primary\" type=\"submit\">
         Sign In
@@ -225,6 +213,6 @@ class __TwigTemplate_dfe9cc9a219bc5e63e8f0f9208c39caaac5cfa9a9d492633971d719d1ee
     </a>-->
     {#% endif %#}
 {% endblock %}
-", "security/login.html.twig", "/home/houssem_saidi/CSC4101/AgVoy/templates/security/login.html.twig");
+", "security/login.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/security/login.html.twig");
     }
 }
