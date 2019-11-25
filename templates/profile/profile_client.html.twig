@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<h1>Votre Profil</h1>
+
+<h2>Bonjour, {{ client.firstname }}</h2>
+
+    <ul>
+    	<li><a href="{{ path('reservation_list', {'id': client.id}) }}">My reservations</a></li>
+    	<li><a href="{{ path('client_edit', {'id': client.id}) }}">Modifier mon profil</a></li>
+    	<li><a href="{{ path('reservation_new') }}">Create new reservation</a></li>
+    </ul>
+{% endblock %}

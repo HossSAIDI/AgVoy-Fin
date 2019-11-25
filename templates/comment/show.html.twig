@@ -1,0 +1,26 @@
+{% extends 'base.html.twig'%}
+
+{% block body %}
+<title>Comment</title>
+
+    <h1>Comment</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Commentary</th>
+                <td>{{ comment.commentary }}</td>
+            </tr>
+            <tr>
+                <th>Grade</th>
+                <td>{{ comment.grade }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('comment_index') }}">back to list</a>
+
+    <a href="{{ path('comment_edit', {'id': comment.id}) }}">edit</a>
+
+    {{ include('comment/_delete_form.html.twig') }}
+{% endblock %}

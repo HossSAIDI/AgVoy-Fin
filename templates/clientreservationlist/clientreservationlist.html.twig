@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Your Reservations{% endblock %}
+
+{% block body %}
+<h2>Here are your reservations!</h2>
+<ul>
+   {% for reservation in reservations %}
+<li>{{ reservation.id }}</li>
+<li>{{ reservation.beginDate }}</li>
+<li>{{ reservation.endDate }}</li>
+<li><a href="{{ path('reservation_edit', {'id': reservation.id}) }}" >Edit Reservation</a></li>
+<li> </li>
+
+   {% endfor %}
+</ul>
+   <button><a href="/reservation/new" >Make new reservation</a></button>   
+          
+     
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html.twig'%}
+<!DOCTYPE html>
+
+<title>Edit UnavailablePeriod</title>
+
+{% block body %}
+    <h1>Edit UnavailablePeriod</h1>
+
+    {{ include('unavailable_period/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('unavailable_period_index') }}">back to list</a>
+
+    {{ include('unavailable_period/_delete_form.html.twig') }}
+{% endblock %}

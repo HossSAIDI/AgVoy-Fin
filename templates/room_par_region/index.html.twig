@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Regions{% endblock %}
+
+{% block body %}
+    <h1>Liste des Regions</h1>
+
+    
+        <tbody>
+        {% for region in regions %}
+            <tr>
+             <td><a href="{{ path('rooms_par_region', {'id': region.id}) }}"> {{ region.name }}</a></td>
+               
+               
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    
+
+    
+{% endblock %}

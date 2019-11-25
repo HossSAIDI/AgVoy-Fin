@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %} {#OWNEER ANNOUNCEMENTS LIST#}
+
+{% block title %}Your announcements{% endblock %}
+
+{% block body %}
+
+<h2>Here are your announcements!</h2>
+            
+<ul>
+ {% for room in rooms %}
+<li>{{ room.price }}</li>
+<li>{{ room.summary }}</li>
+<li>{{ room.description }}</li>
+<li>{{ room.address }}</li>
+<li>{{ room.superficy }}</li>
+<li>{{ room.capacity }}</li>
+<li><button><a href="{{ path('room_edit', {'id': room.id}) }}" >Edit</a></button>
+</li>
+</ul>
+
+{% endfor %}
+ <button>
+    <a href="/room/new" >Add a new room</a>
+</button>
+{% endblock %}

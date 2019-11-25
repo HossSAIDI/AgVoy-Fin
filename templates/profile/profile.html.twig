@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<h1>Votre Profil</h1>
+
+<h2>Bonjour, {{ owner.firstname }}</h2>
+
+    <ul>
+    	<li><a href="{{ path('room_list', {'id': owner.id}) }}">My rooms</a></li>
+    	<li><a href="{{ path('owner_edit', {'id': owner.id}) }}">Modifier mon profil</a></li>
+    	<li><a href="{{ path('room_new') }}">Create new room</a></li>
+    </ul>
+{% endblock %}

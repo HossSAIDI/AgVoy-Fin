@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Region{% endblock %}
+
+{% block body %}
+    <h1>romms dans la region {{ region.name }}</h1>
+
+    <table class="table">
+        <tbody>
+        <thead>
+            <tr>
+               
+                <th>Summary</th>
+                <th>Description</th>
+                <th>Capacity</th>
+                <th>Superficy</th>
+                <th>Price</th>
+                <th>Address</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+        {% for room in region.rooms %}
+            <tr>
+               
+                <td>{{ room.summary }}</td>
+                <td>{{ room.description }}</td>
+                <td>{{ room.capacity }}</td>
+                <td>{{ room.superficy }}</td>
+                <td>{{ room.price }}</td>
+                <td>{{ room.address }}</td>
+                {% if is_granted('ROLE_CLIENT') or is_granted('ROLE_ADMIN')   %}
+                <td> <center> <a href="{{ path('reservation_new' , {'id' : room.id })  }}">make a reservation</a></center></td>
+                {% endif %}    
+                
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+            
+              
+      
+          
+           {% endfor %}   
+        </tbody>
+    </table>
+
+  
+{% endblock %}
+   
+  
