@@ -53,7 +53,7 @@ class OwnerRoomController extends AbstractController
             $entityManager->persist($room);
             $entityManager->flush();
             $this->get('session')->getFlashBag()->add('message', 'Room added successfully!'); //message flash
-            
+            return $this->redirectToRoute('room_index');
         }
 
         return $this->render('room/new.html.twig', [
