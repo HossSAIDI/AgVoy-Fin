@@ -21,6 +21,7 @@ class RoomType extends AbstractType
             ->add('superficy', NumberType::class, ['label' => "Superficie"])
             ->add('price', NumberType::class, ['label' => "Prix"])
             ->add('address', TextType::class, ['label' => "Adresse"])
+            ->add('region')
         ;
     }
 

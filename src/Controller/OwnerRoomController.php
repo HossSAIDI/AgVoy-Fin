@@ -35,7 +35,14 @@ class OwnerRoomController extends AbstractController
         $form = $this->createForm(RoomType::class, $room);
         $form->handleRequest($request);
 
+
         if ($form->isSubmitted() && $form->isValid()) {
+            $user = $this->getUser();
+            $owner = $user->getUsers();
+            if(!$owner) {
+                throw $this->createAccessDeniedException();
+            }
+            $room->setOwner($owner);
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($room);
             $entityManager->flush();

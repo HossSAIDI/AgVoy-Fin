@@ -2,7 +2,10 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Client;
+use App\Entity\Owner;
 use App\Entity\Region;
+use App\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 

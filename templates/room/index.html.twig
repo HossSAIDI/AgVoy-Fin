@@ -27,7 +27,7 @@
                 <td>{{ room.address }}</td>
                 <td>
                     <a href="{{ path('room_show', {'id': room.id}) }}">Aperçu</a>
-                    {% if  is_granted('ROLE_ADMIN')   %}
+                    {% if  is_granted('ROLE_OWNER')   %}
                     <a href="{{ path('room_edit', {'id': room.id}) }}">Editer cette chambre</a>
                     {% endif %}
                 </td>
