@@ -65,7 +65,7 @@ class __TwigTemplate_dfe9cc9a219bc5e63e8f0f9208c39caaac5cfa9a9d492633971d719d1ee
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Log in!";
+        echo "Connection";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -102,24 +102,24 @@ class __TwigTemplate_dfe9cc9a219bc5e63e8f0f9208c39caaac5cfa9a9d492633971d719d1ee
         if (twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "user", [], "any", false, false, false, 11)) {
             // line 12
             echo "        <div class=\"mb-3\">
-            You are logged in as ";
+            Vous êtes connecté en tant que ";
             // line 13
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "user", [], "any", false, false, false, 13), "username", [], "any", false, false, false, 13), "html", null, true);
             echo ", <a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
-            echo "\">Logout</a>
+            echo "\">se déconnecter</a>
         </div>
     ";
         }
         // line 16
         echo "
-    <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
-    <label for=\"inputEmail\">Email</label>
+    <h1 class=\"h3 mb-3 font-weight-normal\">Connectez-vous</h1>
+    <label for=\"inputEmail\">Adresse e-mail</label>
     <input type=\"email\" value=\"";
         // line 19
         echo twig_escape_filter($this->env, ($context["last_username"] ?? null), "html", null, true);
         echo "\" name=\"email\" id=\"inputEmail\" class=\"form-control\" required autofocus>
-    <label for=\"inputPassword\">Password</label>
+    <label for=\"inputPassword\">Mot de passe</label>
     <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" required>
 
     <input type=\"hidden\" name=\"_csrf_token\" value=\"";
@@ -129,7 +129,7 @@ class __TwigTemplate_dfe9cc9a219bc5e63e8f0f9208c39caaac5cfa9a9d492633971d719d1ee
 
 
     <button class=\"btn btn-lg btn-primary\" type=\"submit\">
-        Sign In
+       Se connecter
     </button>
 </form>
 
@@ -161,7 +161,7 @@ class __TwigTemplate_dfe9cc9a219bc5e63e8f0f9208c39caaac5cfa9a9d492633971d719d1ee
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Log in!{% endblock %}
+{% block title %}Connection{% endblock %}
 
 {% block body %}
 <form method=\"post\">
@@ -171,21 +171,21 @@ class __TwigTemplate_dfe9cc9a219bc5e63e8f0f9208c39caaac5cfa9a9d492633971d719d1ee
 
     {% if app.user %}
         <div class=\"mb-3\">
-            You are logged in as {{ app.user.username }}, <a href=\"{{ path('app_logout') }}\">Logout</a>
+            Vous êtes connecté en tant que {{ app.user.username }}, <a href=\"{{ path('app_logout') }}\">se déconnecter</a>
         </div>
     {% endif %}
 
-    <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
-    <label for=\"inputEmail\">Email</label>
+    <h1 class=\"h3 mb-3 font-weight-normal\">Connectez-vous</h1>
+    <label for=\"inputEmail\">Adresse e-mail</label>
     <input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control\" required autofocus>
-    <label for=\"inputPassword\">Password</label>
+    <label for=\"inputPassword\">Mot de passe</label>
     <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" required>
 
     <input type=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token('authenticate') }}\">
 
 
     <button class=\"btn btn-lg btn-primary\" type=\"submit\">
-        Sign In
+       Se connecter
     </button>
 </form>
 

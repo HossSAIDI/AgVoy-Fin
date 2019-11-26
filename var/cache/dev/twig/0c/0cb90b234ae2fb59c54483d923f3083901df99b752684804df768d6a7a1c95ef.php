@@ -85,7 +85,7 @@ class __TwigTemplate_b5bbd341f64e8a94693ca4b501837d599cf2450d90dae6504839c6f1c76
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Register</h1>
+        echo "    <h1>S'inscrire en tant que client</h1>
 
     ";
         // line 8
@@ -103,7 +103,7 @@ class __TwigTemplate_b5bbd341f64e8a94693ca4b501837d599cf2450d90dae6504839c6f1c76
         // line 11
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, ($context["registrationForm"] ?? null), "agreeTerms", [], "any", false, false, false, 11), 'row');
         echo "
-        <button class=\"btn\" type=\"submit\">Register</button>
+        <button class=\"btn\" type=\"submit\">S'inscrire</button>
     ";
         // line 13
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock(($context["registrationForm"] ?? null), 'form_end');
@@ -140,13 +140,13 @@ class __TwigTemplate_b5bbd341f64e8a94693ca4b501837d599cf2450d90dae6504839c6f1c76
 {% block title %}Register{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
+    <h1>S'inscrire en tant que client</h1>
 
     {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.plainPassword) }}
         {{ form_row(registrationForm.agreeTerms) }}
-        <button class=\"btn\" type=\"submit\">Register</button>
+        <button class=\"btn\" type=\"submit\">S'inscrire</button>
     {{ form_end(registrationForm) }}
 
 {% endblock %}

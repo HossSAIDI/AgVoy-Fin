@@ -24,5 +24,6 @@ class AppFixtures extends Fixture{
 
     private function getRegionsData(){
         yield ['FR', 'Bretagne', 'La région des crêpes'];
+        yield ['FR', 'Ile de France', 'La région française capitale'];
     }
 }
