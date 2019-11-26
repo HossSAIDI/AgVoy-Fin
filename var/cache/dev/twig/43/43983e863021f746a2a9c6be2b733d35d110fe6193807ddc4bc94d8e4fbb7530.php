@@ -75,7 +75,7 @@ class __TwigTemplate_bdabdda71ae7fabf58b68c539d56edc6f3843088afa23887e144f9e7640
         // line 6
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, ($context["region"] ?? null), "id", [], "any", false, false, false, 6))), "html", null, true);
         echo "\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn\">Supprimer</button>
 </form>
 ";
         
@@ -109,7 +109,7 @@ class __TwigTemplate_bdabdda71ae7fabf58b68c539d56edc6f3843088afa23887e144f9e7640
 <form method=\"post\" action=\"{{ path('region_delete', {'id': region.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ region.id) }}\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn\">Supprimer</button>
 </form>
 {% endblock %}
 ", "region/_delete_form.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/region/_delete_form.html.twig");

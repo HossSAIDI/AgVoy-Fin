@@ -142,27 +142,29 @@ class __TwigTemplate_d8a86c59f60b17af7a44c760a70fda5468aff5037a075df011d2b044cb0
             if (($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_CLIENT") || $this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN"))) {
                 // line 33
                 echo "                <td> <center> <a href=\"";
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("reservation_new", ["id" => twig_get_attribute($this->env, $this->source, $context["room"], "id", [], "any", false, false, false, 33)]), "html", null, true);
-                echo "\">Faire une réservation</a></center></td>
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room_show", ["id" => twig_get_attribute($this->env, $this->source, $context["room"], "id", [], "any", false, false, false, 33)]), "html", null, true);
+                echo "\">Aperçu</a></center></td>
                 ";
             }
             // line 35
-            echo "                ";
+            echo "
+                ";
+            // line 36
             if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-                // line 36
+                // line 37
                 echo "                    <a href=\"";
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["room"], "id", [], "any", false, false, false, 36)]), "html", null, true);
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("region_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["room"], "id", [], "any", false, false, false, 37)]), "html", null, true);
                 echo "\">Editer cette région</a>
                 ";
             }
-            // line 38
+            // line 39
             echo "                
             </tr>
         ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 41
+            // line 42
             echo "            <tr>
                 <td colspan=\"8\">Aucune occurence trouvée</td>
             </tr>
@@ -175,7 +177,7 @@ class __TwigTemplate_d8a86c59f60b17af7a44c760a70fda5468aff5037a075df011d2b044cb0
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['room'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 48
+        // line 49
         echo "   
         </tbody>
     </table>
@@ -202,7 +204,7 @@ class __TwigTemplate_d8a86c59f60b17af7a44c760a70fda5468aff5037a075df011d2b044cb0
 
     public function getDebugInfo()
     {
-        return array (  179 => 48,  166 => 41,  159 => 38,  153 => 36,  150 => 35,  144 => 33,  142 => 32,  138 => 31,  134 => 30,  130 => 29,  126 => 28,  122 => 27,  118 => 26,  114 => 24,  109 => 23,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  181 => 49,  168 => 42,  161 => 39,  155 => 37,  153 => 36,  150 => 35,  144 => 33,  142 => 32,  138 => 31,  134 => 30,  130 => 29,  126 => 28,  122 => 27,  118 => 26,  114 => 24,  109 => 23,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -239,10 +241,11 @@ class __TwigTemplate_d8a86c59f60b17af7a44c760a70fda5468aff5037a075df011d2b044cb0
                 <td>{{ room.price }}</td>
                 <td>{{ room.address }}</td>
                 {% if is_granted('ROLE_CLIENT') or is_granted('ROLE_ADMIN')   %}
-                <td> <center> <a href=\"{{ path('reservation_new' , {'id' : room.id })  }}\">Faire une réservation</a></center></td>
+                <td> <center> <a href=\"{{ path('room_show' , {'id' : room.id })  }}\">Aperçu</a></center></td>
                 {% endif %}
+
                 {% if  is_granted('ROLE_ADMIN')   %}
-                    <a href=\"{{ path('room_edit', {'id': room.id}) }}\">Editer cette région</a>
+                    <a href=\"{{ path('region_edit', {'id': room.id}) }}\">Editer cette région</a>
                 {% endif %}
                 
             </tr>

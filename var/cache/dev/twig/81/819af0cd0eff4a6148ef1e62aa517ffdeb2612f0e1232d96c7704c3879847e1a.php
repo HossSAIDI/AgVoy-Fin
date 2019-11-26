@@ -66,7 +66,7 @@ class __TwigTemplate_daea1b4f20d853c9693d467006c0d6b4b8b705009d5e6aeb7c1cf368823
 
         // line 3
         echo "<title>Region index</title>
-    <h1>Region index</h1>
+    <h1>Liste des régions</h1>
 
     <table class=\"table\">
         <thead>
@@ -166,7 +166,7 @@ class __TwigTemplate_daea1b4f20d853c9693d467006c0d6b4b8b705009d5e6aeb7c1cf368823
         return new Source("{% extends 'base.html.twig' %}
 {% block body %}
 <title>Region index</title>
-    <h1>Region index</h1>
+    <h1>Liste des régions</h1>
 
     <table class=\"table\">
         <thead>

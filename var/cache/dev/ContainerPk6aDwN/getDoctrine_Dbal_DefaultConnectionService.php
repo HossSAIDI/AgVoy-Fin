@@ -15,6 +15,13 @@ include_once $this->targetDirs[3].'/vendor/symfony/doctrine-bridge/Logger/DbalLo
 include_once $this->targetDirs[3].'/vendor/doctrine/dbal/lib/Doctrine/DBAL/Logging/DebugStack.php';
 include_once $this->targetDirs[3].'/vendor/doctrine/event-manager/lib/Doctrine/Common/EventManager.php';
 include_once $this->targetDirs[3].'/vendor/symfony/doctrine-bridge/ContainerAwareEventManager.php';
+include_once $this->targetDirs[3].'/vendor/doctrine/event-manager/lib/Doctrine/Common/EventSubscriber.php';
+include_once $this->targetDirs[3].'/vendor/vich/uploader-bundle/EventListener/Doctrine/BaseListener.php';
+include_once $this->targetDirs[3].'/vendor/vich/uploader-bundle/EventListener/Doctrine/CleanListener.php';
+include_once $this->targetDirs[3].'/vendor/vich/uploader-bundle/Adapter/AdapterInterface.php';
+include_once $this->targetDirs[3].'/vendor/vich/uploader-bundle/Adapter/ORM/DoctrineORMAdapter.php';
+include_once $this->targetDirs[3].'/vendor/vich/uploader-bundle/EventListener/Doctrine/RemoveListener.php';
+include_once $this->targetDirs[3].'/vendor/vich/uploader-bundle/EventListener/Doctrine/UploadListener.php';
 include_once $this->targetDirs[3].'/vendor/doctrine/doctrine-bundle/ConnectionFactory.php';
 
 $a = new \Doctrine\DBAL\Configuration();
@@ -33,6 +40,14 @@ $d = new \Symfony\Bridge\Doctrine\ContainerAwareEventManager(new \Symfony\Compon
 ], [
     'doctrine.orm.default_listeners.attach_entity_listeners' => '?',
 ]));
+
+$e = new \Vich\UploaderBundle\Adapter\ORM\DoctrineORMAdapter();
+$f = ($this->privates['vich_uploader.metadata_reader'] ?? $this->getVichUploader_MetadataReaderService());
+$g = ($this->services['vich_uploader.upload_handler'] ?? $this->load('getVichUploader_UploadHandlerService.php'));
+
+$d->addEventSubscriber(new \Vich\UploaderBundle\EventListener\Doctrine\CleanListener('room', $e, $f, $g));
+$d->addEventSubscriber(new \Vich\UploaderBundle\EventListener\Doctrine\RemoveListener('room', $e, $f, $g));
+$d->addEventSubscriber(new \Vich\UploaderBundle\EventListener\Doctrine\UploadListener('room', $e, $f, $g));
 $d->addEventListener([0 => 'loadClassMetadata'], 'doctrine.orm.default_listeners.attach_entity_listeners');
 
 return $this->services['doctrine.dbal.default_connection'] = (new \Doctrine\Bundle\DoctrineBundle\ConnectionFactory([]))->createConnection(['url' => $this->getEnv('resolve:DATABASE_URL'), 'charset' => 'utf8mb4', 'host' => 'localhost', 'port' => NULL, 'user' => 'root', 'password' => NULL, 'driver' => 'pdo_mysql', 'driverOptions' => [], 'defaultTableOptions' => ['collate' => 'utf8mb4_unicode_ci']], $a, $d, []);

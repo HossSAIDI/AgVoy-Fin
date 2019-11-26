@@ -30,10 +30,11 @@
                 <td>{{ room.price }}</td>
                 <td>{{ room.address }}</td>
                 {% if is_granted('ROLE_CLIENT') or is_granted('ROLE_ADMIN')   %}
-                <td> <center> <a href="{{ path('reservation_new' , {'id' : room.id })  }}">Faire une réservation</a></center></td>
+                <td> <center> <a href="{{ path('room_show' , {'id' : room.id })  }}">Aperçu</a></center></td>
                 {% endif %}
+
                 {% if  is_granted('ROLE_ADMIN')   %}
-                    <a href="{{ path('room_edit', {'id': room.id}) }}">Editer cette région</a>
+                    <a href="{{ path('region_edit', {'id': room.id}) }}">Editer cette région</a>
                 {% endif %}
                 
             </tr>

@@ -109,6 +109,7 @@ class Reservation
     }
 
     public function __toString() {
-        return $this->beginDate." to ".$this->endDate;
+
+        return "De ".date_format($this->beginDate, 'Y-m-d')." à ".date_format($this->endDate, 'Y-m-d');
     }
 }

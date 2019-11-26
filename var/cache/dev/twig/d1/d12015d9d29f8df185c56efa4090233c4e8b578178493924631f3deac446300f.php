@@ -118,42 +118,77 @@ class __TwigTemplate_48b065d7224598d3c17ee6eea218f226575ac30a508f86c487ee2041207
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "region", [], "any", false, false, false, 36), "html", null, true);
         echo "</td>
         </tr>
+        <tr>
+            <th scope=\"row\">Date Indisponible</th>
+            ";
+        // line 40
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "reservations", [], "any", false, false, false, 40));
+        foreach ($context['_seq'] as $context["_key"] => $context["reservation"]) {
+            // line 41
+            echo "            <td>";
+            echo twig_escape_filter($this->env, $context["reservation"], "html", null, true);
+            echo "</td>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['reservation'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 43
+        echo "        </tr>
+        <tr>
+            <th>Image</th>
+            <td><img src=\"";
+        // line 46
+        echo twig_escape_filter($this->env, $this->extensions['Vich\UploaderBundle\Twig\Extension\UploaderExtension']->asset(($context["room"] ?? null), "imageFile"), "html", null, true);
+        echo "\"/></td>
+        </tr>
     </tbody>
     </table>
 
     ";
-        // line 41
-        echo twig_include($this->env, $context, "room/_delete_form.html.twig");
+        // line 51
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_OWNER")) {
+            // line 52
+            echo "    ";
+            echo twig_include($this->env, $context, "room/_delete_form.html.twig");
+            echo "
+    ";
+        }
+        // line 54
         echo "
 
+    ";
+        // line 56
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_CLIENT")) {
+            // line 57
+            echo "        <td> <a href=\"";
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("reservation_new", ["id" => twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "id", [], "any", false, false, false, 57)]), "html", null, true);
+            echo "\">Faire une réservation</a></td>
+    ";
+        }
+        // line 59
+        echo "    <br>
+
     <a href=\"";
-        // line 43
+        // line 61
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room_index");
         echo "\">Retour</a>
 
     <br>
     ";
-        // line 46
+        // line 64
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_OWNER")) {
-            // line 47
+            // line 65
             echo "        <a href=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room_edit", ["id" => twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "id", [], "any", false, false, false, 47)]), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room_edit", ["id" => twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "id", [], "any", false, false, false, 65)]), "html", null, true);
             echo "\">Editer la chambre</a>
     ";
         }
-        // line 49
+        // line 67
         echo "
-    ";
-        // line 50
-        if (($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_CLIENT") || $this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN"))) {
-            // line 51
-            echo "        <td> <center> <a href=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("reservation_new", ["id" => twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "id", [], "any", false, false, false, 51)]), "html", null, true);
-            echo "\">Faire une réservation</a></center></td>
-    ";
-        }
-        // line 53
-        echo "
+
+
 
 
 ";
@@ -177,7 +212,7 @@ class __TwigTemplate_48b065d7224598d3c17ee6eea218f226575ac30a508f86c487ee2041207
 
     public function getDebugInfo()
     {
-        return array (  156 => 53,  150 => 51,  148 => 50,  145 => 49,  139 => 47,  137 => 46,  131 => 43,  126 => 41,  118 => 36,  111 => 32,  104 => 28,  97 => 24,  90 => 20,  83 => 16,  74 => 10,  68 => 6,  58 => 5,  35 => 1,);
+        return array (  189 => 67,  183 => 65,  181 => 64,  175 => 61,  171 => 59,  165 => 57,  163 => 56,  159 => 54,  153 => 52,  151 => 51,  143 => 46,  138 => 43,  129 => 41,  125 => 40,  118 => 36,  111 => 32,  104 => 28,  97 => 24,  90 => 20,  83 => 16,  74 => 10,  68 => 6,  58 => 5,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -219,10 +254,28 @@ class __TwigTemplate_48b065d7224598d3c17ee6eea218f226575ac30a508f86c487ee2041207
             <th scope=\"row\">Région</th>
             <td>{{ room.region }}</td>
         </tr>
+        <tr>
+            <th scope=\"row\">Date Indisponible</th>
+            {% for reservation in room.reservations %}
+            <td>{{ reservation }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Image</th>
+            <td><img src=\"{{ vich_uploader_asset(room, 'imageFile') }}\"/></td>
+        </tr>
     </tbody>
     </table>
 
+    {% if is_granted('ROLE_OWNER')  %}
     {{ include('room/_delete_form.html.twig') }}
+    {% endif %}
+
+
+    {% if is_granted('ROLE_CLIENT') %}
+        <td> <a href=\"{{ path('reservation_new' , {'id' : room.id })  }}\">Faire une réservation</a></td>
+    {% endif %}
+    <br>
 
     <a href=\"{{ path('room_index') }}\">Retour</a>
 
@@ -231,9 +284,7 @@ class __TwigTemplate_48b065d7224598d3c17ee6eea218f226575ac30a508f86c487ee2041207
         <a href=\"{{ path('room_edit', {'id': room.id}) }}\">Editer la chambre</a>
     {% endif %}
 
-    {% if is_granted('ROLE_CLIENT') or is_granted('ROLE_ADMIN')   %}
-        <td> <center> <a href=\"{{ path('reservation_new' , {'id' : room.id })  }}\">Faire une réservation</a></center></td>
-    {% endif %}
+
 
 
 

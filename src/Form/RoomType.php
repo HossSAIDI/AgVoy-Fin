@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class RoomType extends AbstractType
 {
@@ -22,6 +23,8 @@ class RoomType extends AbstractType
             ->add('price', NumberType::class, ['label' => "Prix"])
             ->add('address', TextType::class, ['label' => "Adresse"])
             ->add('region')
+            ->add('imageName', TextType::class,  ['disabled' => true])
+            ->add('imageFile', VichImageType::class, ['required' => false])
         ;
     }
 

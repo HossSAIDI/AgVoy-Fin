@@ -43,6 +43,12 @@ class OwnerRoomController extends AbstractController
                 throw $this->createAccessDeniedException();
             }
             $room->setOwner($owner);
+            // Change conte-type according to image's
+            $imagefile = $room->getImageFile();
+            if($imagefile) {
+                $mimetype = $imagefile->getMimeType();
+                $room->setContentType($mimetype);
+            }
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($room);
             $entityManager->flush();

@@ -66,19 +66,19 @@ class __TwigTemplate_de0ee8c61c5c5afdf82eb53faca79caa092b639fe94275a5c4da75e6f7d
 
         // line 3
         echo "
-<title>Edit Region</title>
+<title>Editer cette région</title>
 
-    <h1>Edit Region</h1>
+    <h1>Editer cette région</h1>
 
     ";
         // line 8
-        echo twig_include($this->env, $context, "region/_form.html.twig", ["button_label" => "Update"]);
+        echo twig_include($this->env, $context, "region/_form.html.twig", ["button_label" => "Mettre à jour"]);
         echo "
 
     <a href=\"";
         // line 10
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("region_index");
-        echo "\">back to list</a>
+        echo "\">Retour</a>
 
     ";
         // line 12
@@ -113,13 +113,13 @@ class __TwigTemplate_de0ee8c61c5c5afdf82eb53faca79caa092b639fe94275a5c4da75e6f7d
         return new Source("{% extends 'base.html.twig'%}
 {% block body %}
 
-<title>Edit Region</title>
+<title>Editer cette région</title>
 
-    <h1>Edit Region</h1>
+    <h1>Editer cette région</h1>
 
-    {{ include('region/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('region/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 
-    <a href=\"{{ path('region_index') }}\">back to list</a>
+    <a href=\"{{ path('region_index') }}\">Retour</a>
 
     {{ include('region/_delete_form.html.twig') }}
 {% endblock %}

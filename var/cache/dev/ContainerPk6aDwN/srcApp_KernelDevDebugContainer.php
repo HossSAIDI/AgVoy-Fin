@@ -1,6 +1,6 @@
 <?php
 
-namespace ContainerUx0ykwy;
+namespace ContainerPk6aDwN;
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -1126,7 +1126,7 @@ class srcApp_KernelDevDebugContainer extends Container
      */
     protected function getVichUploader_PropertyMappingFactoryService()
     {
-        return $this->privates['vich_uploader.property_mapping_factory'] = new \Vich\UploaderBundle\Mapping\PropertyMappingFactory($this, ($this->privates['vich_uploader.metadata_reader'] ?? $this->getVichUploader_MetadataReaderService()), [], '_name');
+        return $this->privates['vich_uploader.property_mapping_factory'] = new \Vich\UploaderBundle\Mapping\PropertyMappingFactory($this, ($this->privates['vich_uploader.metadata_reader'] ?? $this->getVichUploader_MetadataReaderService()), $this->getParameter('vich_uploader.mappings'), '_name');
     }
 
     /**
@@ -1203,6 +1203,7 @@ class srcApp_KernelDevDebugContainer extends Container
         'doctrine_migrations.dir_name' => false,
         'twig.default_path' => false,
         'swiftmailer.spool.default.memory.path' => false,
+        'vich_uploader.mappings' => false,
     ];
     private $dynamicParameters = [];
 
@@ -1298,6 +1299,24 @@ class srcApp_KernelDevDebugContainer extends Container
             case 'doctrine_migrations.dir_name': $value = ($this->targetDirs[3].'/src/Migrations'); break;
             case 'twig.default_path': $value = ($this->targetDirs[3].'/templates'); break;
             case 'swiftmailer.spool.default.memory.path': $value = ($this->targetDirs[0].'/swiftmailer/spool/default'); break;
+            case 'vich_uploader.mappings': $value = [
+                'room' => [
+                    'uri_prefix' => '/images/room',
+                    'upload_destination' => ($this->targetDirs[3].'/public/images/room'),
+                    'namer' => [
+                        'service' => NULL,
+                        'options' => NULL,
+                    ],
+                    'directory_namer' => [
+                        'service' => NULL,
+                        'options' => NULL,
+                    ],
+                    'delete_on_remove' => true,
+                    'delete_on_update' => true,
+                    'inject_on_load' => false,
+                    'db_driver' => 'orm',
+                ],
+            ]; break;
             default: throw new InvalidArgumentException(sprintf('The dynamic parameter "%s" must be defined.', $name));
         }
         $this->loadedDynamicParameters[$name] = true;
@@ -1623,9 +1642,6 @@ class srcApp_KernelDevDebugContainer extends Container
             ],
             'env(VAR_DUMPER_SERVER)' => '127.0.0.1:9912',
             'vich_uploader.default_filename_attribute_suffix' => '_name',
-            'vich_uploader.mappings' => [
-
-            ],
             'vich_uploader.file_injector.class' => 'Vich\\UploaderBundle\\Injector\\FileInjector',
             'console.command.ids' => [
                 0 => 'console.command.public_alias.doctrine_cache.contains_command',

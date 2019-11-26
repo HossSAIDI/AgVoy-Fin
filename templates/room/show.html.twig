@@ -35,10 +35,28 @@
             <th scope="row">Région</th>
             <td>{{ room.region }}</td>
         </tr>
+        <tr>
+            <th scope="row">Date Indisponible</th>
+            {% for reservation in room.reservations %}
+            <td>{{ reservation }}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>Image</th>
+            <td><img src="{{ vich_uploader_asset(room, 'imageFile') }}"/></td>
+        </tr>
     </tbody>
     </table>
 
+    {% if is_granted('ROLE_OWNER')  %}
     {{ include('room/_delete_form.html.twig') }}
+    {% endif %}
+
+
+    {% if is_granted('ROLE_CLIENT') %}
+        <td> <a href="{{ path('reservation_new' , {'id' : room.id })  }}">Faire une réservation</a></td>
+    {% endif %}
+    <br>
 
     <a href="{{ path('room_index') }}">Retour</a>
 
@@ -47,9 +65,7 @@
         <a href="{{ path('room_edit', {'id': room.id}) }}">Editer la chambre</a>
     {% endif %}
 
-    {% if is_granted('ROLE_CLIENT') or is_granted('ROLE_ADMIN')   %}
-        <td> <center> <a href="{{ path('reservation_new' , {'id' : room.id })  }}">Faire une réservation</a></center></td>
-    {% endif %}
+
 
 
 
