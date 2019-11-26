@@ -68,47 +68,42 @@ class __TwigTemplate_280e7515709044b4446568447864740311c896f8dd9aaa3d14a19b7de11
         echo "
 <title>Reservation</title>
 
-    <h1>Reservation</h1>
+    <h1>Ma réservation</h1>
 
     <table class=\"table\">
         <tbody>
             <tr>
-                <th>BeginDate</th>
+                <th>Date de début de séjour</th>
                 <td>";
         // line 12
         ((twig_get_attribute($this->env, $this->source, ($context["reservation"] ?? null), "beginDate", [], "any", false, false, false, 12)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["reservation"] ?? null), "beginDate", [], "any", false, false, false, 12), "Y-m-d"), "html", null, true))) : (print ("")));
         echo "</td>
             </tr>
             <tr>
-                <th>EndDate</th>
+                <th>Date de fin de séjour</th>
                 <td>";
         // line 16
         ((twig_get_attribute($this->env, $this->source, ($context["reservation"] ?? null), "endDate", [], "any", false, false, false, 16)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["reservation"] ?? null), "endDate", [], "any", false, false, false, 16), "Y-m-d"), "html", null, true))) : (print ("")));
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Confirmed</th>
-                <td>";
-        // line 20
-        echo ((twig_get_attribute($this->env, $this->source, ($context["reservation"] ?? null), "confirmed", [], "any", false, false, false, 20)) ? ("Yes") : ("No"));
         echo "</td>
             </tr>
         </tbody>
     </table>
 
     <a href=\"";
-        // line 25
+        // line 21
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("reservation_index");
-        echo "\">back to list</a>
+        echo "\">Retour</a>
+
+    <br>
 
     <a href=\"";
-        // line 27
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("reservation_edit", ["id" => twig_get_attribute($this->env, $this->source, ($context["reservation"] ?? null), "id", [], "any", false, false, false, 27)]), "html", null, true);
-        echo "\">edit</a>
+        // line 25
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("reservation_edit", ["id" => twig_get_attribute($this->env, $this->source, ($context["reservation"] ?? null), "id", [], "any", false, false, false, 25)]), "html", null, true);
+        echo "\">Editez ma réservation</a>
 
     ";
-        // line 29
-        echo twig_include($this->env, $context, "reservation/_delete_form.html.twig");
+        // line 27
+        echo twig_include($this->env, $context, "reservation/_delete_form.html.twig", ["button_label" => "Supprimer"]);
         echo "
 ";
         
@@ -131,7 +126,7 @@ class __TwigTemplate_280e7515709044b4446568447864740311c896f8dd9aaa3d14a19b7de11
 
     public function getDebugInfo()
     {
-        return array (  111 => 29,  106 => 27,  101 => 25,  93 => 20,  86 => 16,  79 => 12,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  106 => 27,  101 => 25,  94 => 21,  86 => 16,  79 => 12,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -141,30 +136,28 @@ class __TwigTemplate_280e7515709044b4446568447864740311c896f8dd9aaa3d14a19b7de11
 
 <title>Reservation</title>
 
-    <h1>Reservation</h1>
+    <h1>Ma réservation</h1>
 
     <table class=\"table\">
         <tbody>
             <tr>
-                <th>BeginDate</th>
+                <th>Date de début de séjour</th>
                 <td>{{ reservation.beginDate ? reservation.beginDate|date('Y-m-d') : '' }}</td>
             </tr>
             <tr>
-                <th>EndDate</th>
+                <th>Date de fin de séjour</th>
                 <td>{{ reservation.endDate ? reservation.endDate|date('Y-m-d') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Confirmed</th>
-                <td>{{ reservation.confirmed ? 'Yes' : 'No' }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href=\"{{ path('reservation_index') }}\">back to list</a>
+    <a href=\"{{ path('reservation_index') }}\">Retour</a>
 
-    <a href=\"{{ path('reservation_edit', {'id': reservation.id}) }}\">edit</a>
+    <br>
 
-    {{ include('reservation/_delete_form.html.twig') }}
+    <a href=\"{{ path('reservation_edit', {'id': reservation.id}) }}\">Editez ma réservation</a>
+
+    {{ include('reservation/_delete_form.html.twig', {\"button_label\": \"Supprimer\"}) }}
 {% endblock %}
 ", "reservation/show.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/reservation/show.html.twig");
     }

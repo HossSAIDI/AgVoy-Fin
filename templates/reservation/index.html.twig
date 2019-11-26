@@ -3,15 +3,14 @@
 {% block body %}
 
 <title>Reservation index</title>
-    <h1>Reservation index</h1>
+    <h1>Liste de mes réservations</h1>
 
     <table class="table">
         <thead>
             <tr>
-                <th>BeginDate</th>
-                <th>EndDate</th>
-                <th>Confirmed</th>
-                <th>actions</th>
+                <th>Date de début de séjour</th>
+                <th>Date de fin de séjour</th>
+                <th>Confirmé</th>
             </tr>
         </thead>
         <tbody>
@@ -21,17 +20,18 @@
                 <td>{{ reservation.endDate ? reservation.endDate|date('Y-m-d') : '' }}</td>
                 <td>{{ reservation.confirmed ? 'Yes' : 'No' }}</td>
                 <td>
-                    <a href="{{ path('reservation_show', {'id': reservation.id}) }}">show</a>
-                    <a href="{{ path('reservation_edit', {'id': reservation.id}) }}">edit</a>
+                    <a href="{{ path('reservation_show', {'id': reservation.id}) }}">Aperçu</a>
+                </td>
+                <td>
+                    <a href="{{ path('reservation_edit', {'id': reservation.id}) }}">Editer</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="5">no records found</td>
+                <td colspan="5">Aucune occurence trouvée</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('reservation_new') }}">Create new</a>
 {% endblock %}

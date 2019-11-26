@@ -85,7 +85,7 @@ class __TwigTemplate_98e6109396a1b7bda3b11a2a8d4b1a5f61528473f383f367706ddbbbc17
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>Liste des Regions</h1>
+        echo "    <h1>Découvrez nos magnifiques régions</h1>
 
     
         <tbody>
@@ -160,7 +160,7 @@ class __TwigTemplate_98e6109396a1b7bda3b11a2a8d4b1a5f61528473f383f367706ddbbbc17
 {% block title %}Liste des Regions{% endblock %}
 
 {% block body %}
-    <h1>Liste des Regions</h1>
+    <h1>Découvrez nos magnifiques régions</h1>
 
     
         <tbody>

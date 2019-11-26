@@ -79,7 +79,7 @@ class __TwigTemplate_ca60db3c2d8c22abb28b5835eb32203c68eb740992cd4fa2a7b9db2878b
         // line 32
         echo $this->extensions['Camurphy\BootstrapMenuBundle\Twig\Extension\MenuExtension']->renderMenu($this->env, "main");
         echo "
-        
+
     </ul>
   </div>
  </nav>
@@ -269,7 +269,7 @@ class __TwigTemplate_ca60db3c2d8c22abb28b5835eb32203c68eb740992cd4fa2a7b9db2878b
   <div class=\"collapse navbar-collapse\" id=\"navbarsMainDefault\">
     <ul class=\"navbar-nav mr-auto\">
                 {{ render_bootstrap_menu('main') }}
-        
+
     </ul>
   </div>
  </nav>

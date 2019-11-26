@@ -94,12 +94,12 @@ class __TwigTemplate_2a9728c872d9dbb60bd513cffeb43f8441e329eba95f861ddf52391ff3b
         <thead>
             <tr>
                
-                <th>Summary</th>
+                <th>Résumé</th>
                 <th>Description</th>
-                <th>Capacity</th>
-                <th>Superficy</th>
-                <th>Price</th>
-                <th>Address</th>
+                <th>Capacité</th>
+                <th>Superficie</th>
+                <th>Prix</th>
+                <th>Adresse</th>
                
             </tr>
         </thead>
@@ -143,7 +143,7 @@ class __TwigTemplate_2a9728c872d9dbb60bd513cffeb43f8441e329eba95f861ddf52391ff3b
                 // line 33
                 echo "                <td> <center> <a href=\"";
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("reservation_new", ["id" => twig_get_attribute($this->env, $this->source, $context["room"], "id", [], "any", false, false, false, 33)]), "html", null, true);
-                echo "\">make a reservation</a></center></td>
+                echo "\">Faire une réservation</a></center></td>
                 ";
             }
             // line 34
@@ -156,7 +156,7 @@ class __TwigTemplate_2a9728c872d9dbb60bd513cffeb43f8441e329eba95f861ddf52391ff3b
         if (!$context['_iterated']) {
             // line 38
             echo "            <tr>
-                <td colspan=\"8\">no records found</td>
+                <td colspan=\"8\">Aucune occurence trouvée</td>
             </tr>
             
               
@@ -211,12 +211,12 @@ class __TwigTemplate_2a9728c872d9dbb60bd513cffeb43f8441e329eba95f861ddf52391ff3b
         <thead>
             <tr>
                
-                <th>Summary</th>
+                <th>Résumé</th>
                 <th>Description</th>
-                <th>Capacity</th>
-                <th>Superficy</th>
-                <th>Price</th>
-                <th>Address</th>
+                <th>Capacité</th>
+                <th>Superficie</th>
+                <th>Prix</th>
+                <th>Adresse</th>
                
             </tr>
         </thead>
@@ -231,13 +231,13 @@ class __TwigTemplate_2a9728c872d9dbb60bd513cffeb43f8441e329eba95f861ddf52391ff3b
                 <td>{{ room.price }}</td>
                 <td>{{ room.address }}</td>
                 {% if is_granted('ROLE_CLIENT') or is_granted('ROLE_ADMIN')   %}
-                <td> <center> <a href=\"{{ path('reservation_new' , {'id' : room.id })  }}\">make a reservation</a></center></td>
+                <td> <center> <a href=\"{{ path('reservation_new' , {'id' : room.id })  }}\">Faire une réservation</a></center></td>
                 {% endif %}    
                 
             </tr>
         {% else %}
             <tr>
-                <td colspan=\"8\">no records found</td>
+                <td colspan=\"8\">Aucune occurence trouvée</td>
             </tr>
             
               

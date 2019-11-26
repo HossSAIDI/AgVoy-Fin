@@ -69,13 +69,16 @@ class __TwigTemplate_d77b6bd0ce368497a7a0d2eac04d7463bdcc4a75c5018638783f143a6d5
 <form method=\"post\" action=\"";
         // line 4
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("reservation_delete", ["id" => twig_get_attribute($this->env, $this->source, ($context["reservation"] ?? null), "id", [], "any", false, false, false, 4)]), "html", null, true);
-        echo "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+        echo "\" onsubmit=\"return confirm('Êtes vous sur de vouloir supprimer cette région ?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"";
         // line 6
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, ($context["reservation"] ?? null), "id", [], "any", false, false, false, 6))), "html", null, true);
         echo "\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn\">";
+        // line 7
+        echo twig_escape_filter($this->env, (((isset($context["button_label"]) || array_key_exists("button_label", $context))) ? (_twig_default_filter(($context["button_label"] ?? null), "Delete")) : ("Delete")), "html", null, true);
+        echo "</button>
 </form>
 ";
         
@@ -98,7 +101,7 @@ class __TwigTemplate_d77b6bd0ce368497a7a0d2eac04d7463bdcc4a75c5018638783f143a6d5
 
     public function getDebugInfo()
     {
-        return array (  76 => 6,  71 => 4,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  80 => 7,  76 => 6,  71 => 4,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -106,10 +109,10 @@ class __TwigTemplate_d77b6bd0ce368497a7a0d2eac04d7463bdcc4a75c5018638783f143a6d5
         return new Source("{% extends 'base.html.twig'%}
 {% block body %}
 
-<form method=\"post\" action=\"{{ path('reservation_delete', {'id': reservation.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+<form method=\"post\" action=\"{{ path('reservation_delete', {'id': reservation.id}) }}\" onsubmit=\"return confirm('Êtes vous sur de vouloir supprimer cette région ?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ reservation.id) }}\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn\">{{ button_label|default('Delete') }}</button>
 </form>
 {% endblock %}
 ", "reservation/_delete_form.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/reservation/_delete_form.html.twig");

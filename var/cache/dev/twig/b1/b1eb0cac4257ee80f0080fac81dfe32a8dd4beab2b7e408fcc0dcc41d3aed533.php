@@ -68,17 +68,17 @@ class __TwigTemplate_d9083884fa9dc44b166c07fd0604b0442437db7237d4fe9ff44bb7a9784
         echo "
 
 <title>Edit Room</title>
-   <h1>Edit Room</h1>
+   <h1>Editer ma chambre</h1>
 
     ";
         // line 9
-        echo twig_include($this->env, $context, "room/_form.html.twig", ["button_label" => "Update"]);
+        echo twig_include($this->env, $context, "room/_form.html.twig", ["button_label" => "Mettre à jour"]);
         echo "
 
     <a href=\"";
         // line 11
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room_index");
-        echo "\">back to list</a>
+        echo "\">Retour</a>
 
     ";
         // line 13
@@ -116,11 +116,11 @@ class __TwigTemplate_d9083884fa9dc44b166c07fd0604b0442437db7237d4fe9ff44bb7a9784
 
 
 <title>Edit Room</title>
-   <h1>Edit Room</h1>
+   <h1>Editer ma chambre</h1>
 
-    {{ include('room/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('room/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 
-    <a href=\"{{ path('room_index') }}\">back to list</a>
+    <a href=\"{{ path('room_index') }}\">Retour</a>
 
     {{ include('room/_delete_form.html.twig') }}
 {% endblock %}

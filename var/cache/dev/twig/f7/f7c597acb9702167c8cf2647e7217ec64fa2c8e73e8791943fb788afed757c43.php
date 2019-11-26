@@ -67,21 +67,21 @@ class __TwigTemplate_56f1a923dd1e9609ecd10372b0667e2c54d6bd6130ac9b4dda182abc0f4
         // line 4
         echo "<title>Edit Reservation</title>
 
-    <h1>Edit Reservation</h1>
+    <h1>Editer ma réservation</h1>
 
     ";
         // line 8
-        echo twig_include($this->env, $context, "reservation/_form.html.twig", ["button_label" => "Update"]);
+        echo twig_include($this->env, $context, "reservation/_form.html.twig", ["button_label" => "Mettre à jour"]);
         echo "
 
     <a href=\"";
         // line 10
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("reservation_index");
-        echo "\">back to list</a>
+        echo "\">Retour</a>
 
     ";
         // line 12
-        echo twig_include($this->env, $context, "reservation/_delete_form.html.twig");
+        echo twig_include($this->env, $context, "reservation/_delete_form.html.twig", ["button_label" => "Supprimer"]);
         echo "
 ";
         
@@ -114,13 +114,13 @@ class __TwigTemplate_56f1a923dd1e9609ecd10372b0667e2c54d6bd6130ac9b4dda182abc0f4
 {% block body %}
 <title>Edit Reservation</title>
 
-    <h1>Edit Reservation</h1>
+    <h1>Editer ma réservation</h1>
 
-    {{ include('reservation/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('reservation/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 
-    <a href=\"{{ path('reservation_index') }}\">back to list</a>
+    <a href=\"{{ path('reservation_index') }}\">Retour</a>
 
-    {{ include('reservation/_delete_form.html.twig') }}
+    {{ include('reservation/_delete_form.html.twig', {'button_label': 'Supprimer'}) }}
 {% endblock %}
 ", "reservation/edit.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/reservation/edit.html.twig");
     }

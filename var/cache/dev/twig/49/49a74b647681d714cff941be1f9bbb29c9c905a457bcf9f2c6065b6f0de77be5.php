@@ -69,13 +69,13 @@ class __TwigTemplate_13fc48d42c191e3d816bb7a26db589160c2d1a30d938958f3250f8f1887
 <form method=\"post\" action=\"";
         // line 4
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room_delete", ["id" => twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "id", [], "any", false, false, false, 4)]), "html", null, true);
-        echo "\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+        echo "\" onsubmit=\"return confirm('Êtes vous sur de vouloir supprimer cette chambre ?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"";
         // line 6
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "id", [], "any", false, false, false, 6))), "html", null, true);
         echo "\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn\">Supprimer</button>
 </form>
 ";
         
@@ -106,10 +106,10 @@ class __TwigTemplate_13fc48d42c191e3d816bb7a26db589160c2d1a30d938958f3250f8f1887
         return new Source("{% extends 'base.html.twig'%}
 {% block body %}
 
-<form method=\"post\" action=\"{{ path('room_delete', {'id': room.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this item?');\">
+<form method=\"post\" action=\"{{ path('room_delete', {'id': room.id}) }}\" onsubmit=\"return confirm('Êtes vous sur de vouloir supprimer cette chambre ?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ room.id) }}\">
-    <button class=\"btn\">Delete</button>
+    <button class=\"btn\">Supprimer</button>
 </form>
 {% endblock %}
 ", "room/_delete_form.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/room/_delete_form.html.twig");

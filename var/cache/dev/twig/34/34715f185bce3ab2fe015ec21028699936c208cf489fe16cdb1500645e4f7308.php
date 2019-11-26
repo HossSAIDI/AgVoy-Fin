@@ -67,17 +67,17 @@ class __TwigTemplate_3013620f7287ba7c95c4ee74b3fe889677c73c39726fc4418c58bc70f47
         // line 4
         echo "<title>New Reservation</title>
 
-    <h1>Create new Reservation</h1>
+    <h1>Faire une réservation</h1>
 
     ";
         // line 8
-        echo twig_include($this->env, $context, "reservation/_form.html.twig");
+        echo twig_include($this->env, $context, "reservation/_form.html.twig", ["button_label" => "Sauvegarder"]);
         echo "
 
     <a href=\"";
         // line 10
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("reservation_index");
-        echo "\">back to list</a>
+        echo "\">Retour</a>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -109,11 +109,11 @@ class __TwigTemplate_3013620f7287ba7c95c4ee74b3fe889677c73c39726fc4418c58bc70f47
 {% block body %}
 <title>New Reservation</title>
 
-    <h1>Create new Reservation</h1>
+    <h1>Faire une réservation</h1>
 
-    {{ include('reservation/_form.html.twig') }}
+    {{ include('reservation/_form.html.twig', {'button_label': 'Sauvegarder'}) }}
 
-    <a href=\"{{ path('reservation_index') }}\">back to list</a>
+    <a href=\"{{ path('reservation_index') }}\">Retour</a>
 {% endblock %}
 ", "reservation/new.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/reservation/new.html.twig");
     }

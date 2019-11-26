@@ -13,6 +13,7 @@ security:
     role_hierarchy:		
 
      ROLE_CLIENT: ROLE_USER
+     ROLE_OWNER: ROLE_USER
      ROLE_ADMIN: [ROLE_OWNER,ROLE_CLIENT]
      ROLE_SUPER_ADMIN: ROLE_ADMIN
 

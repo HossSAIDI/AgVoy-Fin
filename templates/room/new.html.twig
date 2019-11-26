@@ -5,9 +5,9 @@
 
 <title>New Room</title>
 
-    <h1>Create new Room</h1>
+    <h1>Créer une nouvelle chambre</h1>
 
-    {{ include('room/_form.html.twig') }}
+    {{ include('room/_form.html.twig', {'button_label': "Sauvegarder"}) }}
 
-    <a href="{{ path('room_index') }}">back to list</a>
+    <a href="{{ path('room_index') }}">Retour</a>
 {% endblock %}

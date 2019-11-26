@@ -6,10 +6,10 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Presentation</th>
-                <th>Country</th>
-                <th>actions</th>
+                <th>Nom</th>
+                <th>Présentation</th>
+                <th>Pays</th>
+                <th>Interagir</th>
             </tr>
         </thead>
         <tbody>
@@ -19,20 +19,20 @@
                 <td>{{ region.presentation }}</td>
                 <td>{{ region.country }}</td>
                 <td>
-                    <a href="{{ path('region_show', {'id': region.id}) }}">show</a>
+                    <a href="{{ path('region_show', {'id': region.id}) }}">Aperçu</a>
                     {% if is_granted('ROLE_ADMIN')  %}
-                    <a href="{{ path('region_edit', {'id': region.id}) }}">edit</a>
+                    <a href="{{ path('region_edit', {'id': region.id}) }}">Editer</a>
                     {% endif %}
                     
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="5">no records found</td>
+                <td colspan="5">Aucune occurence trouvée</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('region_new') }}">Create new</a>
+    <a href="{{ path('region_new') }}">Créer une nouvelle région</a>
 {% endblock %}

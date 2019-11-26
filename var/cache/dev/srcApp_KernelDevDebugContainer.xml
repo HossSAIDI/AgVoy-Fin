@@ -304,6 +304,9 @@
       <parameter key="ROLE_CLIENT" type="collection">
         <parameter>ROLE_USER</parameter>
       </parameter>
+      <parameter key="ROLE_OWNER" type="collection">
+        <parameter>ROLE_USER</parameter>
+      </parameter>
       <parameter key="ROLE_ADMIN" type="collection">
         <parameter>ROLE_OWNER</parameter>
         <parameter>ROLE_CLIENT</parameter>
@@ -4881,7 +4884,7 @@
         <argument key="user" type="service" id=".errored..service_locator.wypGnUQ.App\Entity\User"/>
       </argument>
     </service>
-    <service id=".service_locator.aZrKPH2" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.Qf3l5ht" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\BackofficeRegionController::delete" type="service" id=".service_locator.vIHt.Cx"/>
@@ -4909,6 +4912,7 @@
         <argument key="App\Controller\ReservationController::delete" type="service" id=".service_locator.eH1R0Zw"/>
         <argument key="App\Controller\ReservationController::edit" type="service" id=".service_locator.eH1R0Zw"/>
         <argument key="App\Controller\ReservationController::index" type="service" id=".service_locator._yUaljH"/>
+        <argument key="App\Controller\ReservationController::new" type="service" id=".service_locator.BkOHXLl"/>
         <argument key="App\Controller\ReservationController::show" type="service" id=".service_locator.eH1R0Zw"/>
         <argument key="App\Controller\RoomsParRegion::index" type="service" id=".service_locator.BPeAJFx"/>
         <argument key="App\Controller\RoomsParRegion::show" type="service" id=".service_locator.vIHt.Cx"/>
@@ -4946,6 +4950,7 @@
         <argument key="App\Controller\ReservationController:delete" type="service" id=".service_locator.eH1R0Zw"/>
         <argument key="App\Controller\ReservationController:edit" type="service" id=".service_locator.eH1R0Zw"/>
         <argument key="App\Controller\ReservationController:index" type="service" id=".service_locator._yUaljH"/>
+        <argument key="App\Controller\ReservationController:new" type="service" id=".service_locator.BkOHXLl"/>
         <argument key="App\Controller\ReservationController:show" type="service" id=".service_locator.eH1R0Zw"/>
         <argument key="App\Controller\RoomsParRegion:index" type="service" id=".service_locator.BPeAJFx"/>
         <argument key="App\Controller\RoomsParRegion:show" type="service" id=".service_locator.vIHt.Cx"/>
@@ -5358,12 +5363,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.aZrKPH2"/>
+      <argument type="service" id=".service_locator.Qf3l5ht"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.aZrKPH2"/>
+      <argument type="service" id=".service_locator.Qf3l5ht"/>
     </service>
     <service id=".service_locator.UwRI0uT" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
@@ -5701,7 +5706,7 @@
     <service id="mailer" alias="swiftmailer.mailer.default" public="true"/>
     <service id="logger" alias="monolog.logger"/>
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.aZrKPH2"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.Qf3l5ht"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>

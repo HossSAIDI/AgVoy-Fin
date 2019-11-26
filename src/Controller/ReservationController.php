@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Reservation;
+use App\Entity\Room;
 use App\Form\ReservationType;
 use App\Repository\ReservationRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -26,11 +27,22 @@ class ReservationController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="reservation_new", methods={"GET","POST"})
+     * @Route("/new/{id}", requirements={"id": "\d+"}, name="reservation_new", methods={"GET","POST"})
      */
-    public function new(Request $request): Response
+    public function new(Request $request, Room $room): Response
     {
         $reservation = new Reservation();
+        $reservation->setConfirmed(false);
+
+        $user = $this->getUser();
+        $client = $user->getClients();
+
+        if(!$client) {
+            throw $this->createAccessDeniedException();
+        }
+        $reservation->setClient($client);
+
+        $reservation->setRoom($room);
         $form = $this->createForm(ReservationType::class, $reservation);
         $form->handleRequest($request);
 

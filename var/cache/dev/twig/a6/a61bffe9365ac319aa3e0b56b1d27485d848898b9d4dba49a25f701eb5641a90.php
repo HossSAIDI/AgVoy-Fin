@@ -68,17 +68,17 @@ class __TwigTemplate_a8d935e5e0ffdf2c08dc99c25b5aab15b9a094e983605cb7eaa3d7ef432
         echo "
 <title>New Room</title>
 
-    <h1>Create new Room</h1>
+    <h1>Créer une nouvelle chambre</h1>
 
     ";
         // line 10
-        echo twig_include($this->env, $context, "room/_form.html.twig");
+        echo twig_include($this->env, $context, "room/_form.html.twig", ["button_label" => "Sauvegarder"]);
         echo "
 
     <a href=\"";
         // line 12
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room_index");
-        echo "\">back to list</a>
+        echo "\">Retour</a>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -112,11 +112,11 @@ class __TwigTemplate_a8d935e5e0ffdf2c08dc99c25b5aab15b9a094e983605cb7eaa3d7ef432
 
 <title>New Room</title>
 
-    <h1>Create new Room</h1>
+    <h1>Créer une nouvelle chambre</h1>
 
-    {{ include('room/_form.html.twig') }}
+    {{ include('room/_form.html.twig', {'button_label': \"Sauvegarder\"}) }}
 
-    <a href=\"{{ path('room_index') }}\">back to list</a>
+    <a href=\"{{ path('room_index') }}\">Retour</a>
 {% endblock %}
 ", "room/new.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/room/new.html.twig");
     }

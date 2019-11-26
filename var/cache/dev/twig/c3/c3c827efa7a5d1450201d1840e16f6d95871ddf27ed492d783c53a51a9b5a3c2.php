@@ -70,13 +70,13 @@ class __TwigTemplate_a1222d57c61fefb1c1b7a939094882e59f5360117b20ab8d3a5088c9131
     <table class=\"table\">
         <thead>
             <tr>
-                <th>Summary</th>
+                <th>Résumé</th>
                 <th>Description</th>
-                <th>Capacity</th>
-                <th>Superficy</th>
-                <th>Price</th>
-                <th>Address</th>
-                <th>actions</th>
+                <th>Capacité</th>
+                <th>Superficie</th>
+                <th>Prix</th>
+                <th>Adresse</th>
+                <th>Interagir</th>
             </tr>
         </thead>
         <tbody>
@@ -116,14 +116,14 @@ class __TwigTemplate_a1222d57c61fefb1c1b7a939094882e59f5360117b20ab8d3a5088c9131
                     <a href=\"";
             // line 29
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room_show", ["id" => twig_get_attribute($this->env, $this->source, $context["room"], "id", [], "any", false, false, false, 29)]), "html", null, true);
-            echo "\">show</a>
+            echo "\">Aperçu</a>
                     ";
             // line 30
             if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
                 // line 31
                 echo "                    <a href=\"";
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["room"], "id", [], "any", false, false, false, 31)]), "html", null, true);
-                echo "\">edit</a>
+                echo "\">Editer cette chambre</a>
                     ";
             }
             // line 33
@@ -135,7 +135,7 @@ class __TwigTemplate_a1222d57c61fefb1c1b7a939094882e59f5360117b20ab8d3a5088c9131
         if (!$context['_iterated']) {
             // line 36
             echo "            <tr>
-                <td colspan=\"8\">no records found</td>
+                <td colspan=\"8\">Aucune occurence trouvée</td>
             </tr>
         ";
         }
@@ -145,11 +145,17 @@ class __TwigTemplate_a1222d57c61fefb1c1b7a939094882e59f5360117b20ab8d3a5088c9131
         // line 40
         echo "        </tbody>
     </table>
-
-    <a href=\"";
-        // line 43
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room_new");
-        echo "\">Create new</a>
+    ";
+        // line 42
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_OWNER")) {
+            // line 43
+            echo "        <a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room_new");
+            echo "\">Crée une nouvelle Chambre</a>
+    ";
+        }
+        // line 45
+        echo "
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -171,7 +177,7 @@ class __TwigTemplate_a1222d57c61fefb1c1b7a939094882e59f5360117b20ab8d3a5088c9131
 
     public function getDebugInfo()
     {
-        return array (  151 => 43,  146 => 40,  137 => 36,  130 => 33,  124 => 31,  122 => 30,  118 => 29,  113 => 27,  109 => 26,  105 => 25,  101 => 24,  97 => 23,  93 => 22,  90 => 21,  85 => 20,  68 => 5,  58 => 4,  35 => 1,);
+        return array (  158 => 45,  152 => 43,  150 => 42,  146 => 40,  137 => 36,  130 => 33,  124 => 31,  122 => 30,  118 => 29,  113 => 27,  109 => 26,  105 => 25,  101 => 24,  97 => 23,  93 => 22,  90 => 21,  85 => 20,  68 => 5,  58 => 4,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -185,13 +191,13 @@ class __TwigTemplate_a1222d57c61fefb1c1b7a939094882e59f5360117b20ab8d3a5088c9131
     <table class=\"table\">
         <thead>
             <tr>
-                <th>Summary</th>
+                <th>Résumé</th>
                 <th>Description</th>
-                <th>Capacity</th>
-                <th>Superficy</th>
-                <th>Price</th>
-                <th>Address</th>
-                <th>actions</th>
+                <th>Capacité</th>
+                <th>Superficie</th>
+                <th>Prix</th>
+                <th>Adresse</th>
+                <th>Interagir</th>
             </tr>
         </thead>
         <tbody>
@@ -204,21 +210,23 @@ class __TwigTemplate_a1222d57c61fefb1c1b7a939094882e59f5360117b20ab8d3a5088c9131
                 <td>{{ room.price }}</td>
                 <td>{{ room.address }}</td>
                 <td>
-                    <a href=\"{{ path('room_show', {'id': room.id}) }}\">show</a>
+                    <a href=\"{{ path('room_show', {'id': room.id}) }}\">Aperçu</a>
                     {% if  is_granted('ROLE_ADMIN')   %}
-                    <a href=\"{{ path('room_edit', {'id': room.id}) }}\">edit</a>
+                    <a href=\"{{ path('room_edit', {'id': room.id}) }}\">Editer cette chambre</a>
                     {% endif %}
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan=\"8\">no records found</td>
+                <td colspan=\"8\">Aucune occurence trouvée</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
+    {% if  is_granted('ROLE_OWNER')   %}
+        <a href=\"{{ path('room_new') }}\">Crée une nouvelle Chambre</a>
+    {% endif %}
 
-    <a href=\"{{ path('room_new') }}\">Create new</a>
 {% endblock %}
 ", "room/index.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/room/index.html.twig");
     }

@@ -10,12 +10,12 @@
         <thead>
             <tr>
                
-                <th>Summary</th>
+                <th>Résumé</th>
                 <th>Description</th>
-                <th>Capacity</th>
-                <th>Superficy</th>
-                <th>Price</th>
-                <th>Address</th>
+                <th>Capacité</th>
+                <th>Superficie</th>
+                <th>Prix</th>
+                <th>Adresse</th>
                
             </tr>
         </thead>
@@ -30,13 +30,13 @@
                 <td>{{ room.price }}</td>
                 <td>{{ room.address }}</td>
                 {% if is_granted('ROLE_CLIENT') or is_granted('ROLE_ADMIN')   %}
-                <td> <center> <a href="{{ path('reservation_new' , {'id' : room.id })  }}">make a reservation</a></center></td>
+                <td> <center> <a href="{{ path('reservation_new' , {'id' : room.id })  }}">Faire une réservation</a></center></td>
                 {% endif %}    
                 
             </tr>
         {% else %}
             <tr>
-                <td colspan="8">no records found</td>
+                <td colspan="8">Aucune occurence trouvée</td>
             </tr>
             
               

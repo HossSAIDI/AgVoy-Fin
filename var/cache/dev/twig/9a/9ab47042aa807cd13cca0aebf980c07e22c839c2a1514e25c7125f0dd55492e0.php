@@ -71,10 +71,10 @@ class __TwigTemplate_e77597ff5999de8e2c33f7441e734c76c40307a5b8093fe5c85f75ec7a4
     <table class=\"table\">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Presentation</th>
-                <th>Country</th>
-                <th>actions</th>
+                <th>Nom</th>
+                <th>Présentation</th>
+                <th>Pays</th>
+                <th>Interagir</th>
             </tr>
         </thead>
         <tbody>
@@ -102,14 +102,14 @@ class __TwigTemplate_e77597ff5999de8e2c33f7441e734c76c40307a5b8093fe5c85f75ec7a4
                     <a href=\"";
             // line 22
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("region_show", ["id" => twig_get_attribute($this->env, $this->source, $context["region"], "id", [], "any", false, false, false, 22)]), "html", null, true);
-            echo "\">show</a>
+            echo "\">Aperçu</a>
                     ";
             // line 23
             if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
                 // line 24
                 echo "                    <a href=\"";
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("region_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["region"], "id", [], "any", false, false, false, 24)]), "html", null, true);
-                echo "\">edit</a>
+                echo "\">Editer</a>
                     ";
             }
             // line 26
@@ -122,7 +122,7 @@ class __TwigTemplate_e77597ff5999de8e2c33f7441e734c76c40307a5b8093fe5c85f75ec7a4
         if (!$context['_iterated']) {
             // line 30
             echo "            <tr>
-                <td colspan=\"5\">no records found</td>
+                <td colspan=\"5\">Aucune occurence trouvée</td>
             </tr>
         ";
         }
@@ -136,7 +136,7 @@ class __TwigTemplate_e77597ff5999de8e2c33f7441e734c76c40307a5b8093fe5c85f75ec7a4
     <a href=\"";
         // line 37
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("region_new");
-        echo "\">Create new</a>
+        echo "\">Créer une nouvelle région</a>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -171,10 +171,10 @@ class __TwigTemplate_e77597ff5999de8e2c33f7441e734c76c40307a5b8093fe5c85f75ec7a4
     <table class=\"table\">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Presentation</th>
-                <th>Country</th>
-                <th>actions</th>
+                <th>Nom</th>
+                <th>Présentation</th>
+                <th>Pays</th>
+                <th>Interagir</th>
             </tr>
         </thead>
         <tbody>
@@ -184,22 +184,22 @@ class __TwigTemplate_e77597ff5999de8e2c33f7441e734c76c40307a5b8093fe5c85f75ec7a4
                 <td>{{ region.presentation }}</td>
                 <td>{{ region.country }}</td>
                 <td>
-                    <a href=\"{{ path('region_show', {'id': region.id}) }}\">show</a>
+                    <a href=\"{{ path('region_show', {'id': region.id}) }}\">Aperçu</a>
                     {% if is_granted('ROLE_ADMIN')  %}
-                    <a href=\"{{ path('region_edit', {'id': region.id}) }}\">edit</a>
+                    <a href=\"{{ path('region_edit', {'id': region.id}) }}\">Editer</a>
                     {% endif %}
                     
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan=\"5\">no records found</td>
+                <td colspan=\"5\">Aucune occurence trouvée</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href=\"{{ path('region_new') }}\">Create new</a>
+    <a href=\"{{ path('region_new') }}\">Créer une nouvelle région</a>
 {% endblock %}
 ", "region/index.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/region/index.html.twig");
     }

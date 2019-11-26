@@ -7,36 +7,32 @@
 
 	
 
-    <h1>Room</h1>
+    <h1>{{ room.summary }}</h1>
 
  <table class="table">
     <tbody>
-        <tr>
-      	    <th scope="row">Summary</th>
-            <td>{{ room.summary }}</td>
-        </tr>
         <tr>
             <th scope="row">Description</th>
             <td>{{ room.description }}</td>
         </tr>
         <tr>
-            <th scope="row">Capacity</th>
+            <th scope="row">Capacité</th>
             <td>{{ room.capacity }}</td>
         </tr>
         <tr>
-            <th scope="row">Superficy</th>
+            <th scope="row">Superficie</th>
             <td>{{ room.superficy }}</td>
         </tr>
         <tr>
-            <th scope="row">Price</th>
+            <th scope="row">Prix</th>
             <td>{{ room.price }}</td>
         </tr>
         <tr>
-            <th scope="row">Address</th>
+            <th scope="row">Adresse</th>
             <td>{{ room.address }}</td>
         </tr>
         <tr>
-            <th scope="row">Region</th>
+            <th scope="row">Région</th>
             <td>{{ room.region }}</td>
         </tr>
     </tbody>
@@ -44,11 +40,13 @@
 
     {{ include('room/_delete_form.html.twig') }}
 
-    <a href="{{ path('room_index') }}">back to list</a>
+    <a href="{{ path('room_index') }}">Retour</a>
 
     <br>
+    {% if is_granted('ROLE_OWNER')  %}
+        <a href="{{ path('room_edit', {'id': room.id}) }}">Editer la chambre</a>
+    {% endif %}
 
-    <a href="{{ path('room_edit', {'id': room.id}) }}">edit</a>
 
 
 {% endblock %}

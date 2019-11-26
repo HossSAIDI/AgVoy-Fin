@@ -3,9 +3,9 @@
 {% block body %}
 <title>New Reservation</title>
 
-    <h1>Create new Reservation</h1>
+    <h1>Faire une réservation</h1>
 
-    {{ include('reservation/_form.html.twig') }}
+    {{ include('reservation/_form.html.twig', {'button_label': 'Sauvegarder'}) }}
 
-    <a href="{{ path('reservation_index') }}">back to list</a>
+    <a href="{{ path('reservation_index') }}">Retour</a>
 {% endblock %}

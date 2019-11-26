@@ -7,13 +7,13 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Summary</th>
+                <th>Résumé</th>
                 <th>Description</th>
-                <th>Capacity</th>
-                <th>Superficy</th>
-                <th>Price</th>
-                <th>Address</th>
-                <th>actions</th>
+                <th>Capacité</th>
+                <th>Superficie</th>
+                <th>Prix</th>
+                <th>Adresse</th>
+                <th>Interagir</th>
             </tr>
         </thead>
         <tbody>
@@ -26,19 +26,21 @@
                 <td>{{ room.price }}</td>
                 <td>{{ room.address }}</td>
                 <td>
-                    <a href="{{ path('room_show', {'id': room.id}) }}">show</a>
+                    <a href="{{ path('room_show', {'id': room.id}) }}">Aperçu</a>
                     {% if  is_granted('ROLE_ADMIN')   %}
-                    <a href="{{ path('room_edit', {'id': room.id}) }}">edit</a>
+                    <a href="{{ path('room_edit', {'id': room.id}) }}">Editer cette chambre</a>
                     {% endif %}
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="8">no records found</td>
+                <td colspan="8">Aucune occurence trouvée</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
+    {% if  is_granted('ROLE_OWNER')   %}
+        <a href="{{ path('room_new') }}">Crée une nouvelle Chambre</a>
+    {% endif %}
 
-    <a href="{{ path('room_new') }}">Create new</a>
 {% endblock %}

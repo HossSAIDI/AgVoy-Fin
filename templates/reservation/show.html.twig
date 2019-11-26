@@ -3,28 +3,26 @@
 
 <title>Reservation</title>
 
-    <h1>Reservation</h1>
+    <h1>Ma réservation</h1>
 
     <table class="table">
         <tbody>
             <tr>
-                <th>BeginDate</th>
+                <th>Date de début de séjour</th>
                 <td>{{ reservation.beginDate ? reservation.beginDate|date('Y-m-d') : '' }}</td>
             </tr>
             <tr>
-                <th>EndDate</th>
+                <th>Date de fin de séjour</th>
                 <td>{{ reservation.endDate ? reservation.endDate|date('Y-m-d') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Confirmed</th>
-                <td>{{ reservation.confirmed ? 'Yes' : 'No' }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('reservation_index') }}">back to list</a>
+    <a href="{{ path('reservation_index') }}">Retour</a>
 
-    <a href="{{ path('reservation_edit', {'id': reservation.id}) }}">edit</a>
+    <br>
 
-    {{ include('reservation/_delete_form.html.twig') }}
+    <a href="{{ path('reservation_edit', {'id': reservation.id}) }}">Editez ma réservation</a>
+
+    {{ include('reservation/_delete_form.html.twig', {"button_label": "Supprimer"}) }}
 {% endblock %}

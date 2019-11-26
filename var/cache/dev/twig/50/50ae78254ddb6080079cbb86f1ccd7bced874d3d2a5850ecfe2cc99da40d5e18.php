@@ -103,12 +103,13 @@ class __TwigTemplate_6e784c396c69dfd513b40aaf6f010f7edce112845a63cb174decc065135
         // line 11
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, ($context["registrationForm"] ?? null), "agreeTerms", [], "any", false, false, false, 11), 'row');
         echo "
+        <button class=\"btn\" type=\"submit\">Register</button>
     ";
-        // line 12
+        // line 13
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock(($context["registrationForm"] ?? null), 'form_end');
         echo "
 
-    <button class=\"btn\" href=\"/owner/new\">Register</button>
+
 
 ";
         
@@ -131,7 +132,7 @@ class __TwigTemplate_6e784c396c69dfd513b40aaf6f010f7edce112845a63cb174decc065135
 
     public function getDebugInfo()
     {
-        return array (  108 => 12,  104 => 11,  100 => 10,  96 => 9,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  109 => 13,  104 => 11,  100 => 10,  96 => 9,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -147,9 +148,10 @@ class __TwigTemplate_6e784c396c69dfd513b40aaf6f010f7edce112845a63cb174decc065135
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.plainPassword) }}
         {{ form_row(registrationForm.agreeTerms) }}
+        <button class=\"btn\" type=\"submit\">Register</button>
     {{ form_end(registrationForm) }}
 
-    <button class=\"btn\" href=\"/owner/new\">Register</button>
+
 
 {% endblock %}
 ", "registration/register.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/registration/register.html.twig");

@@ -22,7 +22,6 @@ return [
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/register_client' => [[['_route' => 'app_register_client', '_controller' => 'App\\Controller\\RegistrationController::register_client'], null, null, null, false, false, null]],
         '/reservation' => [[['_route' => 'reservation_index', '_controller' => 'App\\Controller\\ReservationController::index'], null, ['GET' => 0], null, true, false, null]],
-        '/reservation/new' => [[['_route' => 'reservation_new', '_controller' => 'App\\Controller\\ReservationController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/roomsregion' => [[['_route' => 'liste_region', '_controller' => 'App\\Controller\\RoomsParRegion::index'], null, null, null, true, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
@@ -73,23 +72,26 @@ return [
                     .'|(*:373)'
                 .')'
                 .'|/r(?'
-                    .'|eservation/([^/]++)(?'
-                        .'|(*:409)'
-                        .'|/edit(*:422)'
-                        .'|(*:430)'
+                    .'|eservation/(?'
+                        .'|new/(\\d+)(*:410)'
+                        .'|([^/]++)(?'
+                            .'|(*:429)'
+                            .'|/edit(*:442)'
+                            .'|(*:450)'
+                        .')'
                     .')'
-                    .'|oomsregion/([^/]++)(*:458)'
+                    .'|oomsregion/([^/]++)(*:479)'
                 .')'
                 .'|/u(?'
                     .'|navailable/period/([^/]++)(?'
-                        .'|(*:501)'
-                        .'|/edit(*:514)'
                         .'|(*:522)'
+                        .'|/edit(*:535)'
+                        .'|(*:543)'
                     .')'
                     .'|ser/([^/]++)(?'
-                        .'|(*:546)'
-                        .'|/edit(*:559)'
                         .'|(*:567)'
+                        .'|/edit(*:580)'
+                        .'|(*:588)'
                     .')'
                 .')'
             .')/?$}sDu',
@@ -114,16 +116,17 @@ return [
         352 => [[['_route' => 'room_show', '_controller' => 'App\\Controller\\OwnerRoomController::show'], ['id'], ['GET' => 0], null, false, true, null]],
         365 => [[['_route' => 'room_edit', '_controller' => 'App\\Controller\\OwnerRoomController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
         373 => [[['_route' => 'room_delete', '_controller' => 'App\\Controller\\OwnerRoomController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        409 => [[['_route' => 'reservation_show', '_controller' => 'App\\Controller\\ReservationController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        422 => [[['_route' => 'reservation_edit', '_controller' => 'App\\Controller\\ReservationController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        430 => [[['_route' => 'reservation_delete', '_controller' => 'App\\Controller\\ReservationController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        458 => [[['_route' => 'rooms_par_region', '_controller' => 'App\\Controller\\RoomsParRegion::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        501 => [[['_route' => 'unavailable_period_show', '_controller' => 'App\\Controller\\UnavailablePeriodController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        514 => [[['_route' => 'unavailable_period_edit', '_controller' => 'App\\Controller\\UnavailablePeriodController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        522 => [[['_route' => 'unavailable_period_delete', '_controller' => 'App\\Controller\\UnavailablePeriodController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        546 => [[['_route' => 'user_show', '_controller' => 'App\\Controller\\UserController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        559 => [[['_route' => 'user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        567 => [
+        410 => [[['_route' => 'reservation_new', '_controller' => 'App\\Controller\\ReservationController::new'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        429 => [[['_route' => 'reservation_show', '_controller' => 'App\\Controller\\ReservationController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        442 => [[['_route' => 'reservation_edit', '_controller' => 'App\\Controller\\ReservationController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        450 => [[['_route' => 'reservation_delete', '_controller' => 'App\\Controller\\ReservationController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        479 => [[['_route' => 'rooms_par_region', '_controller' => 'App\\Controller\\RoomsParRegion::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        522 => [[['_route' => 'unavailable_period_show', '_controller' => 'App\\Controller\\UnavailablePeriodController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        535 => [[['_route' => 'unavailable_period_edit', '_controller' => 'App\\Controller\\UnavailablePeriodController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        543 => [[['_route' => 'unavailable_period_delete', '_controller' => 'App\\Controller\\UnavailablePeriodController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        567 => [[['_route' => 'user_show', '_controller' => 'App\\Controller\\UserController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        580 => [[['_route' => 'user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        588 => [
             [['_route' => 'user_delete', '_controller' => 'App\\Controller\\UserController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
