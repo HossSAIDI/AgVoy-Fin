@@ -7,5 +7,5 @@
 
     {{ include('reservation/_form.html.twig', {'button_label': 'Sauvegarder'}) }}
 
-    <a href="{{ path('reservation_index') }}">Retour</a>
+    <a href="{{ path('room_show', {'id': room.id}) }}">Retour</a>
 {% endblock %}

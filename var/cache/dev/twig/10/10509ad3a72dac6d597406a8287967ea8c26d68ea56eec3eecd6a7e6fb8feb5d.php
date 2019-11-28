@@ -76,7 +76,7 @@ class __TwigTemplate_afee44aed8c241abec33aa717e63c61442793e837478aadf158cca587c5
 
     <a href=\"";
         // line 10
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("reservation_index");
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room_show", ["id" => twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "id", [], "any", false, false, false, 10)]), "html", null, true);
         echo "\">Retour</a>
 ";
         
@@ -113,7 +113,7 @@ class __TwigTemplate_afee44aed8c241abec33aa717e63c61442793e837478aadf158cca587c5
 
     {{ include('reservation/_form.html.twig', {'button_label': 'Sauvegarder'}) }}
 
-    <a href=\"{{ path('reservation_index') }}\">Retour</a>
+    <a href=\"{{ path('room_show', {'id': room.id}) }}\">Retour</a>
 {% endblock %}
 ", "reservation/new.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/reservation/new.html.twig");
     }

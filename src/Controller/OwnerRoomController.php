@@ -67,8 +67,14 @@ class OwnerRoomController extends AbstractController
      */
     public function show(Room $room)
     {
+        $user = $this->getUser();
+        $client = $user->getClients();
+        if (!$client){
+            throw $this->createAccessDeniedException();
+        }
         return $this->render('room/show.html.twig', [
             'room' => $room,
+            'client' => $client,
         ]);
     }
 

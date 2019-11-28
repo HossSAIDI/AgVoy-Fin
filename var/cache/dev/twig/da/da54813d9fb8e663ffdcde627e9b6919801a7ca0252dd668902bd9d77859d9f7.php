@@ -121,10 +121,6 @@ class __TwigTemplate_ae0e509c801fbccb28c75b572e7cb1e3b999795c558ae0cf335a960b531
         echo "        </tbody>
     </table>
 
-    <a href=\"";
-        // line 32
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_new");
-        echo "\">Create new</a>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -146,7 +142,7 @@ class __TwigTemplate_ae0e509c801fbccb28c75b572e7cb1e3b999795c558ae0cf335a960b531
 
     public function getDebugInfo()
     {
-        return array (  126 => 32,  121 => 29,  112 => 25,  103 => 21,  99 => 20,  94 => 18,  90 => 17,  87 => 16,  82 => 15,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  121 => 29,  112 => 25,  103 => 21,  99 => 20,  94 => 18,  90 => 17,  87 => 16,  82 => 15,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -182,7 +178,6 @@ class __TwigTemplate_ae0e509c801fbccb28c75b572e7cb1e3b999795c558ae0cf335a960b531
         </tbody>
     </table>
 
-    <a href=\"{{ path('comment_new') }}\">Create new</a>
 {% endblock %}
 ", "comment/index.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/comment/index.html.twig");
     }

@@ -67,17 +67,17 @@ class __TwigTemplate_b6cfc546e87b987cbb47b7a39b7fe1feff359ba02c01137f35d391b8d12
         // line 3
         echo "<title>New Comment</title>
 
-    <h1>Create new Comment</h1>
+    <h1>Créer un nouveau commentaire</h1>
 
     ";
         // line 7
-        echo twig_include($this->env, $context, "comment/_form.html.twig");
+        echo twig_include($this->env, $context, "comment/_form.html.twig", ["button_label" => "Sauvegarder"]);
         echo "
 
     <a href=\"";
         // line 9
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comment_index");
-        echo "\">back to list</a>
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("room_show", ["id" => twig_get_attribute($this->env, $this->source, ($context["room"] ?? null), "id", [], "any", false, false, false, 9)]), "html", null, true);
+        echo "\">Retour</a>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -108,11 +108,11 @@ class __TwigTemplate_b6cfc546e87b987cbb47b7a39b7fe1feff359ba02c01137f35d391b8d12
 {% block body %}
 <title>New Comment</title>
 
-    <h1>Create new Comment</h1>
+    <h1>Créer un nouveau commentaire</h1>
 
-    {{ include('comment/_form.html.twig') }}
+    {{ include('comment/_form.html.twig', {'button_label': 'Sauvegarder'}) }}
 
-    <a href=\"{{ path('comment_index') }}\">back to list</a>
+    <a href=\"{{ path('room_show', {'id': room.id}) }}\">Retour</a>
 {% endblock %}
 ", "comment/new.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/comment/new.html.twig");
     }

@@ -69,7 +69,7 @@ class __TwigTemplate_f380af057d75dea9cdb6b441f7d848012d088e0fbc6149ae7615d005e25
 <form method=\"post\" action=\"";
         // line 4
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("reservation_delete", ["id" => twig_get_attribute($this->env, $this->source, ($context["reservation"] ?? null), "id", [], "any", false, false, false, 4)]), "html", null, true);
-        echo "\" onsubmit=\"return confirm('Êtes vous sur de vouloir supprimer cette région ?');\">
+        echo "\" onsubmit=\"return confirm('Êtes vous sur de vouloir supprimer cette réservation ?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"";
         // line 6
@@ -109,7 +109,7 @@ class __TwigTemplate_f380af057d75dea9cdb6b441f7d848012d088e0fbc6149ae7615d005e25
         return new Source("{% extends 'base.html.twig'%}
 {% block body %}
 
-<form method=\"post\" action=\"{{ path('reservation_delete', {'id': reservation.id}) }}\" onsubmit=\"return confirm('Êtes vous sur de vouloir supprimer cette région ?');\">
+<form method=\"post\" action=\"{{ path('reservation_delete', {'id': reservation.id}) }}\" onsubmit=\"return confirm('Êtes vous sur de vouloir supprimer cette réservation ?');\">
     <input type=\"hidden\" name=\"_method\" value=\"DELETE\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ reservation.id) }}\">
     <button class=\"btn\">{{ button_label|default('Delete') }}</button>

@@ -21,8 +21,14 @@ class ReservationController extends AbstractController
      */
     public function index(ReservationRepository $reservationRepository): Response
     {
+        $user = $this->getUser();
+        $client = $user->getClients();
+        if (!$client){
+            throw $this->createAccessDeniedException();
+        }
+
         return $this->render('reservation/index.html.twig', [
-            'reservations' => $reservationRepository->findAll(),
+            'reservations' => $reservationRepository->findByClient($client),
         ]);
     }
 
@@ -32,7 +38,7 @@ class ReservationController extends AbstractController
     public function new(Request $request, Room $room): Response
     {
         $reservation = new Reservation();
-        $reservation->setConfirmed(false);
+        $reservation->setConfirmed(true);
 
         $user = $this->getUser();
         $client = $user->getClients();
@@ -46,17 +52,32 @@ class ReservationController extends AbstractController
         $form = $this->createForm(ReservationType::class, $reservation);
         $form->handleRequest($request);
 
+
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($reservation);
-            $entityManager->flush();
+            $reservations = $entityManager->getRepository(Reservation::class);
+            $possible = $reservations->createQueryBuilder("reservation")
+                ->where("reservation.room = :room AND NOT (:endDate < reservation.beginDate OR :beginDate > reservation.endDate OR reservation.endDate < :beginDate OR reservation.beginDate > :endDate)")
+                ->setParameter("beginDate", $reservation->getBeginDate())
+                ->setParameter("endDate", $reservation->getEndDate())
+                ->setParameter("room", $room)
+                ->getQuery()->getResult();
+            ;
+            if(count($possible) == 0) {
+                $entityManager->persist($reservation);
+                $entityManager->flush();
+            }
+            else {
+                $this->addFlash("error", "Ces dates sont indisponibles");
+            }
 
-            return $this->redirectToRoute('reservation_index');
+            return $this->redirectToRoute('room_show', array('id'=>$room->getId()));
         }
 
         return $this->render('reservation/new.html.twig', [
             'reservation' => $reservation,
             'form' => $form->createView(),
+            'room' => $room
         ]);
     }
 

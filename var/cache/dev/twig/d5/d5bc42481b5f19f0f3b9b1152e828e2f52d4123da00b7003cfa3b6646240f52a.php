@@ -83,15 +83,50 @@ class __TwigTemplate_15f89e9b638b7ba54984bd20d37a38a5fd7fe956652a7fb90f8be28c2bc
     </ul>
   </div>
  </nav>
+ <div id=\"flashContainer\" class=\"body-margins\">
+     ";
+        // line 39
+        echo "     ";
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["app"] ?? null), "flashes", [0 => [0 => "success", 1 => "warning", 2 => "error"]], "method", false, false, false, 39));
+        foreach ($context['_seq'] as $context["label"] => $context["messages"]) {
+            // line 40
+            echo "         ";
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable($context["messages"]);
+            foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+                // line 41
+                echo "             <div class=\"flash-";
+                echo twig_escape_filter($this->env, $context["label"], "html", null, true);
+                echo "\">
+                 ";
+                // line 42
+                echo twig_escape_filter($this->env, $context["message"], "html", null, true);
+                echo "
+             </div>
+         ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 45
+            echo "     ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['label'], $context['messages'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 46
+        echo " </div>
+
 \t";
-        // line 37
+        // line 48
         $this->displayBlock('body', $context, $blocks);
-        // line 38
+        // line 49
         echo "
 ";
-        // line 39
+        // line 50
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 44
+        // line 55
         echo "</body>
 </html>
 ";
@@ -173,7 +208,7 @@ class __TwigTemplate_15f89e9b638b7ba54984bd20d37a38a5fd7fe956652a7fb90f8be28c2bc
 
     }
 
-    // line 37
+    // line 48
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -191,7 +226,7 @@ class __TwigTemplate_15f89e9b638b7ba54984bd20d37a38a5fd7fe956652a7fb90f8be28c2bc
 
     }
 
-    // line 39
+    // line 50
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -201,14 +236,14 @@ class __TwigTemplate_15f89e9b638b7ba54984bd20d37a38a5fd7fe956652a7fb90f8be28c2bc
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 40
+        // line 51
         echo "<!-- Bootstrap core JavaScript -->
 <script src=\"";
-        // line 41
+        // line 52
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/jquery/jquery.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 42
+        // line 53
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("vendor/bootstrap/js/bootstrap.bundle.min.js"), "html", null, true);
         echo "\"></script>
 ";
@@ -232,7 +267,7 @@ class __TwigTemplate_15f89e9b638b7ba54984bd20d37a38a5fd7fe956652a7fb90f8be28c2bc
 
     public function getDebugInfo()
     {
-        return array (  212 => 42,  208 => 41,  205 => 40,  195 => 39,  177 => 37,  165 => 14,  162 => 13,  143 => 12,  139 => 11,  136 => 10,  126 => 9,  107 => 8,  95 => 44,  93 => 39,  90 => 38,  88 => 37,  80 => 32,  63 => 17,  61 => 9,  57 => 8,  48 => 1,);
+        return array (  247 => 53,  243 => 52,  240 => 51,  230 => 50,  212 => 48,  200 => 14,  197 => 13,  178 => 12,  174 => 11,  171 => 10,  161 => 9,  142 => 8,  130 => 55,  128 => 50,  125 => 49,  123 => 48,  119 => 46,  113 => 45,  104 => 42,  99 => 41,  94 => 40,  89 => 39,  80 => 32,  63 => 17,  61 => 9,  57 => 8,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -273,6 +308,17 @@ class __TwigTemplate_15f89e9b638b7ba54984bd20d37a38a5fd7fe956652a7fb90f8be28c2bc
     </ul>
   </div>
  </nav>
+ <div id=\"flashContainer\" class=\"body-margins\">
+     {# read and display several types of flash messages #}
+     {% for label, messages in app.flashes(['success', 'warning', 'error']) %}
+         {% for message in messages %}
+             <div class=\"flash-{{ label }}\">
+                 {{ message }}
+             </div>
+         {% endfor %}
+     {% endfor %}
+ </div>
+
 \t{% block body %}{% endblock %}
 
 {% block javascripts %}

@@ -16,7 +16,7 @@ return [
     'reservation_list' => [['id'], ['_controller' => 'App\\Controller\\ClientController::ClientReservationsList'], [], [['text', '/reservation/list'], ['variable', '/', '[^/]++', 'id', true], ['text', '/client']], [], []],
     'client_profile' => [['id'], ['_controller' => 'App\\Controller\\ClientController::ClientProfile'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/client/clientprofile']], [], []],
     'comment_index' => [[], ['_controller' => 'App\\Controller\\CommentController::index'], [], [['text', '/comment/']], [], []],
-    'comment_new' => [[], ['_controller' => 'App\\Controller\\CommentController::new'], [], [['text', '/comment/new']], [], []],
+    'comment_new' => [['id'], ['_controller' => 'App\\Controller\\CommentController::new'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id', true], ['text', '/comment/new']], [], []],
     'comment_show' => [['id'], ['_controller' => 'App\\Controller\\CommentController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/comment']], [], []],
     'comment_edit' => [['id'], ['_controller' => 'App\\Controller\\CommentController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'id', true], ['text', '/comment']], [], []],
     'comment_delete' => [['id'], ['_controller' => 'App\\Controller\\CommentController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/comment']], [], []],

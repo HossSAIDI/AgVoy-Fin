@@ -11,6 +11,11 @@
 
  <table class="table">
     <tbody>
+
+        <tr>
+            <th>Image</th>
+            <td><img src="{{ vich_uploader_asset(room, 'imageFile') }}"/></td>
+        </tr>
         <tr>
             <th scope="row">Description</th>
             <td>{{ room.description }}</td>
@@ -37,13 +42,31 @@
         </tr>
         <tr>
             <th scope="row">Date Indisponible</th>
+            <td>
             {% for reservation in room.reservations %}
-            <td>{{ reservation }}</td>
+                {{ reservation }}
+                <br>
+                <br>
             {% endfor %}
+            </td>
         </tr>
         <tr>
-            <th>Image</th>
-            <td><img src="{{ vich_uploader_asset(room, 'imageFile') }}"/></td>
+            <th scope="row">Commentaires</th>
+            {% if room.comments|length > 0 %}
+                <td>
+                {% for comment in room.comments %}
+                    {{ comment }}
+                    {% if client == comment.client %}
+                    <a style="margin-left: 100px" href="{{ path('reservation_delete' , {'id' : room.id })  }}">Supprimer ce commentaire</a>
+                    {% endif %}
+                    <br>
+                    <br>
+                {% endfor %}
+                </td>
+            {% else %}
+                <td>Aucun commentaire</td>
+            {% endif %}
+
         </tr>
     </tbody>
     </table>
@@ -55,6 +78,9 @@
 
     {% if is_granted('ROLE_CLIENT') %}
         <td> <a href="{{ path('reservation_new' , {'id' : room.id })  }}">Faire une réservation</a></td>
+        <br>
+        <td><a href="{{ path('comment_new', {'id' : room.id }) }}">Commenter</a></td>
+
     {% endif %}
     <br>
 

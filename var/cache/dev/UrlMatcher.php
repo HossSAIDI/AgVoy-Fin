@@ -13,7 +13,6 @@ return [
         '/client' => [[['_route' => 'client_index', '_controller' => 'App\\Controller\\ClientController::index'], null, ['GET' => 0], null, true, false, null]],
         '/client/new' => [[['_route' => 'client_new', '_controller' => 'App\\Controller\\ClientController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/comment' => [[['_route' => 'comment_index', '_controller' => 'App\\Controller\\CommentController::index'], null, ['GET' => 0], null, true, false, null]],
-        '/comment/new' => [[['_route' => 'comment_new', '_controller' => 'App\\Controller\\CommentController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\IndexController::indexAction'], null, ['GET' => 0], null, false, false, null]],
         '/owner' => [[['_route' => 'owner_index', '_controller' => 'App\\Controller\\OwnerController::index'], null, ['GET' => 0], null, true, false, null]],
         '/owner/new' => [[['_route' => 'owner_new', '_controller' => 'App\\Controller\\OwnerController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
@@ -49,49 +48,52 @@ return [
                         .')'
                         .'|clientprofile/([^/]++)(*:168)'
                     .')'
-                    .'|omment/([^/]++)(?'
-                        .'|(*:195)'
-                        .'|/edit(*:208)'
-                        .'|(*:216)'
+                    .'|omment/(?'
+                        .'|new/(\\d+)(*:196)'
+                        .'|([^/]++)(?'
+                            .'|(*:215)'
+                            .'|/edit(*:228)'
+                            .'|(*:236)'
+                        .')'
                     .')'
                 .')'
                 .'|/owner/(?'
                     .'|([^/]++)(?'
-                        .'|(*:247)'
+                        .'|(*:268)'
                         .'|/(?'
-                            .'|edit(*:263)'
-                            .'|room/list(*:280)'
+                            .'|edit(*:284)'
+                            .'|room/list(*:301)'
                         .')'
-                        .'|(*:289)'
+                        .'|(*:310)'
                     .')'
-                    .'|ownerprofile/([^/]++)(*:319)'
+                    .'|ownerprofile/([^/]++)(*:340)'
                 .')'
                 .'|/_owner/room/([^/]++)(?'
-                    .'|(*:352)'
-                    .'|/edit(*:365)'
                     .'|(*:373)'
+                    .'|/edit(*:386)'
+                    .'|(*:394)'
                 .')'
                 .'|/r(?'
                     .'|eservation/(?'
-                        .'|new/(\\d+)(*:410)'
+                        .'|new/(\\d+)(*:431)'
                         .'|([^/]++)(?'
-                            .'|(*:429)'
-                            .'|/edit(*:442)'
                             .'|(*:450)'
+                            .'|/edit(*:463)'
+                            .'|(*:471)'
                         .')'
                     .')'
-                    .'|oomsregion/([^/]++)(*:479)'
+                    .'|oomsregion/([^/]++)(*:500)'
                 .')'
                 .'|/u(?'
                     .'|navailable/period/([^/]++)(?'
-                        .'|(*:522)'
-                        .'|/edit(*:535)'
                         .'|(*:543)'
+                        .'|/edit(*:556)'
+                        .'|(*:564)'
                     .')'
                     .'|ser/([^/]++)(?'
-                        .'|(*:567)'
-                        .'|/edit(*:580)'
                         .'|(*:588)'
+                        .'|/edit(*:601)'
+                        .'|(*:609)'
                     .')'
                 .')'
             .')/?$}sDu',
@@ -105,28 +107,29 @@ return [
         128 => [[['_route' => 'reservation_list', '_controller' => 'App\\Controller\\ClientController::ClientReservationsList'], ['id'], ['GET' => 0], null, false, false, null]],
         137 => [[['_route' => 'client_delete', '_controller' => 'App\\Controller\\ClientController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
         168 => [[['_route' => 'client_profile', '_controller' => 'App\\Controller\\ClientController::ClientProfile'], ['id'], ['GET' => 0], null, false, true, null]],
-        195 => [[['_route' => 'comment_show', '_controller' => 'App\\Controller\\CommentController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        208 => [[['_route' => 'comment_edit', '_controller' => 'App\\Controller\\CommentController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        216 => [[['_route' => 'comment_delete', '_controller' => 'App\\Controller\\CommentController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        247 => [[['_route' => 'owner_show', '_controller' => 'App\\Controller\\OwnerController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        263 => [[['_route' => 'owner_edit', '_controller' => 'App\\Controller\\OwnerController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        280 => [[['_route' => 'room_list', '_controller' => 'App\\Controller\\OwnerController::OwnerRoomsList'], ['id'], ['GET' => 0], null, false, false, null]],
-        289 => [[['_route' => 'owner_delete', '_controller' => 'App\\Controller\\OwnerController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        319 => [[['_route' => 'owner_profile', '_controller' => 'App\\Controller\\OwnerController::OwnerProfile'], ['id'], ['GET' => 0], null, false, true, null]],
-        352 => [[['_route' => 'room_show', '_controller' => 'App\\Controller\\OwnerRoomController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        365 => [[['_route' => 'room_edit', '_controller' => 'App\\Controller\\OwnerRoomController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        373 => [[['_route' => 'room_delete', '_controller' => 'App\\Controller\\OwnerRoomController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        410 => [[['_route' => 'reservation_new', '_controller' => 'App\\Controller\\ReservationController::new'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        429 => [[['_route' => 'reservation_show', '_controller' => 'App\\Controller\\ReservationController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        442 => [[['_route' => 'reservation_edit', '_controller' => 'App\\Controller\\ReservationController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        450 => [[['_route' => 'reservation_delete', '_controller' => 'App\\Controller\\ReservationController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        479 => [[['_route' => 'rooms_par_region', '_controller' => 'App\\Controller\\RoomsParRegion::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        522 => [[['_route' => 'unavailable_period_show', '_controller' => 'App\\Controller\\UnavailablePeriodController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        535 => [[['_route' => 'unavailable_period_edit', '_controller' => 'App\\Controller\\UnavailablePeriodController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        543 => [[['_route' => 'unavailable_period_delete', '_controller' => 'App\\Controller\\UnavailablePeriodController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
-        567 => [[['_route' => 'user_show', '_controller' => 'App\\Controller\\UserController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        580 => [[['_route' => 'user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        588 => [
+        196 => [[['_route' => 'comment_new', '_controller' => 'App\\Controller\\CommentController::new'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        215 => [[['_route' => 'comment_show', '_controller' => 'App\\Controller\\CommentController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        228 => [[['_route' => 'comment_edit', '_controller' => 'App\\Controller\\CommentController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        236 => [[['_route' => 'comment_delete', '_controller' => 'App\\Controller\\CommentController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        268 => [[['_route' => 'owner_show', '_controller' => 'App\\Controller\\OwnerController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        284 => [[['_route' => 'owner_edit', '_controller' => 'App\\Controller\\OwnerController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        301 => [[['_route' => 'room_list', '_controller' => 'App\\Controller\\OwnerController::OwnerRoomsList'], ['id'], ['GET' => 0], null, false, false, null]],
+        310 => [[['_route' => 'owner_delete', '_controller' => 'App\\Controller\\OwnerController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        340 => [[['_route' => 'owner_profile', '_controller' => 'App\\Controller\\OwnerController::OwnerProfile'], ['id'], ['GET' => 0], null, false, true, null]],
+        373 => [[['_route' => 'room_show', '_controller' => 'App\\Controller\\OwnerRoomController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        386 => [[['_route' => 'room_edit', '_controller' => 'App\\Controller\\OwnerRoomController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        394 => [[['_route' => 'room_delete', '_controller' => 'App\\Controller\\OwnerRoomController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        431 => [[['_route' => 'reservation_new', '_controller' => 'App\\Controller\\ReservationController::new'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        450 => [[['_route' => 'reservation_show', '_controller' => 'App\\Controller\\ReservationController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        463 => [[['_route' => 'reservation_edit', '_controller' => 'App\\Controller\\ReservationController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        471 => [[['_route' => 'reservation_delete', '_controller' => 'App\\Controller\\ReservationController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        500 => [[['_route' => 'rooms_par_region', '_controller' => 'App\\Controller\\RoomsParRegion::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        543 => [[['_route' => 'unavailable_period_show', '_controller' => 'App\\Controller\\UnavailablePeriodController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        556 => [[['_route' => 'unavailable_period_edit', '_controller' => 'App\\Controller\\UnavailablePeriodController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        564 => [[['_route' => 'unavailable_period_delete', '_controller' => 'App\\Controller\\UnavailablePeriodController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        588 => [[['_route' => 'user_show', '_controller' => 'App\\Controller\\UserController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        601 => [[['_route' => 'user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        609 => [
             [['_route' => 'user_delete', '_controller' => 'App\\Controller\\UserController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

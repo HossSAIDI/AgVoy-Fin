@@ -7,7 +7,11 @@ bootstrap_menu:
           route: 'liste_region'
         Rooms:
           label: 'Chambres'
-          route: 'room_index'  
+          route: 'room_index'
+        Reservations:
+          label: 'Mes réservations'
+          route: 'reservation_index'
+          roles: ["ROLE_CLIENT"]
         account:
           label: 'Mon compte'
           items:

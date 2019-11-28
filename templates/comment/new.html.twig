@@ -2,9 +2,9 @@
 {% block body %}
 <title>New Comment</title>
 
-    <h1>Create new Comment</h1>
+    <h1>Créer un nouveau commentaire</h1>
 
-    {{ include('comment/_form.html.twig') }}
+    {{ include('comment/_form.html.twig', {'button_label': 'Sauvegarder'}) }}
 
-    <a href="{{ path('comment_index') }}">back to list</a>
+    <a href="{{ path('room_show', {'id': room.id}) }}">Retour</a>
 {% endblock %}

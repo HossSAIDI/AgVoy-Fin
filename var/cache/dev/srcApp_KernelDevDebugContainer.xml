@@ -279,6 +279,16 @@
             <parameter key="roles" type="collection"/>
             <parameter key="items" type="collection"/>
           </parameter>
+          <parameter key="Reservations" type="collection">
+            <parameter key="label">Mes réservations</parameter>
+            <parameter key="route">reservation_index</parameter>
+            <parameter key="roles" type="collection">
+              <parameter>ROLE_CLIENT</parameter>
+            </parameter>
+            <parameter key="is_divider">false</parameter>
+            <parameter key="route_parameters" type="collection"/>
+            <parameter key="items" type="collection"/>
+          </parameter>
           <parameter key="account" type="collection">
             <parameter key="label">Mon compte</parameter>
             <parameter key="items" type="collection">
@@ -2110,14 +2120,6 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -5162,6 +5164,12 @@
         <argument key="commentRepository" type="service" id="App\Repository\CommentRepository"/>
       </argument>
     </service>
+    <service id=".service_locator.BkOHXLl" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="room" type="service" id=".errored..service_locator.BkOHXLl.App\Entity\Room"/>
+      </argument>
+    </service>
     <service id=".service_locator.Gn3oxQ2" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5184,12 +5192,6 @@
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="roomRepository" type="service" id="App\Repository\RoomRepository"/>
-      </argument>
-    </service>
-    <service id=".service_locator.BkOHXLl" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="room" type="service" id=".errored..service_locator.BkOHXLl.App\Entity\Room"/>
       </argument>
     </service>
     <service id=".service_locator.wyrb61." class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -5242,7 +5244,7 @@
         <argument key="user" type="service" id=".errored..service_locator.wypGnUQ.App\Entity\User"/>
       </argument>
     </service>
-    <service id=".service_locator.Qf3l5ht" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.vyntS7Y" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\BackofficeRegionController::delete" type="service" id=".service_locator.vIHt.Cx"/>
@@ -5256,6 +5258,7 @@
         <argument key="App\Controller\CommentController::delete" type="service" id=".service_locator.Gn3oxQ2"/>
         <argument key="App\Controller\CommentController::edit" type="service" id=".service_locator.Gn3oxQ2"/>
         <argument key="App\Controller\CommentController::index" type="service" id=".service_locator.Ye_qt7H"/>
+        <argument key="App\Controller\CommentController::new" type="service" id=".service_locator.BkOHXLl"/>
         <argument key="App\Controller\CommentController::show" type="service" id=".service_locator.Gn3oxQ2"/>
         <argument key="App\Controller\OwnerController::delete" type="service" id=".service_locator.1sVfNg4"/>
         <argument key="App\Controller\OwnerController::edit" type="service" id=".service_locator.1sVfNg4"/>
@@ -5294,6 +5297,7 @@
         <argument key="App\Controller\CommentController:delete" type="service" id=".service_locator.Gn3oxQ2"/>
         <argument key="App\Controller\CommentController:edit" type="service" id=".service_locator.Gn3oxQ2"/>
         <argument key="App\Controller\CommentController:index" type="service" id=".service_locator.Ye_qt7H"/>
+        <argument key="App\Controller\CommentController:new" type="service" id=".service_locator.BkOHXLl"/>
         <argument key="App\Controller\CommentController:show" type="service" id=".service_locator.Gn3oxQ2"/>
         <argument key="App\Controller\OwnerController:delete" type="service" id=".service_locator.1sVfNg4"/>
         <argument key="App\Controller\OwnerController:edit" type="service" id=".service_locator.1sVfNg4"/>
@@ -5723,12 +5727,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.Qf3l5ht"/>
+      <argument type="service" id=".service_locator.vyntS7Y"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.Qf3l5ht"/>
+      <argument type="service" id=".service_locator.vyntS7Y"/>
     </service>
     <service id=".service_locator.UwRI0uT" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
@@ -5754,9 +5758,9 @@
     </service>
     <service id=".errored..service_locator.vIHt.Cx.App\Entity\Region" class="App\Entity\Region"/>
     <service id=".errored..service_locator.G3Dsh9s.App\Entity\Client" class="App\Entity\Client"/>
+    <service id=".errored..service_locator.BkOHXLl.App\Entity\Room" class="App\Entity\Room"/>
     <service id=".errored..service_locator.Gn3oxQ2.App\Entity\Comment" class="App\Entity\Comment"/>
     <service id=".errored..service_locator.1sVfNg4.App\Entity\Owner" class="App\Entity\Owner"/>
-    <service id=".errored..service_locator.BkOHXLl.App\Entity\Room" class="App\Entity\Room"/>
     <service id=".errored..service_locator.eH1R0Zw.App\Entity\Reservation" class="App\Entity\Reservation"/>
     <service id=".errored..service_locator.JwkjB0U.App\Entity\UnavailablePeriod" class="App\Entity\UnavailablePeriod"/>
     <service id=".errored..service_locator.wypGnUQ.App\Entity\User" class="App\Entity\User"/>
@@ -6093,7 +6097,7 @@
     <service id="Vich\UploaderBundle\Form\Type\VichImageType" alias="vich_uploader.form.type.image" public="false"/>
     <service id="Vich\UploaderBundle\Templating\Helper\UploaderHelper" alias="vich_uploader.templating.helper.uploader_helper" public="false"/>
     <service id="Vich\UploaderBundle\Twig\Extension\UploaderExtension" alias="vich_uploader.twig.extension.uploader" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.Qf3l5ht"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.vyntS7Y"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>

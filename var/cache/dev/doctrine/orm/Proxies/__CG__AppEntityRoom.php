@@ -64,10 +64,10 @@ class Room extends \App\Entity\Room implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'summary', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'description', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'capacity', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'superficy', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'price', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'address', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'region', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'owner', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'unavailablePeriods', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'reservations', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'comments'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'summary', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'description', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'capacity', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'superficy', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'price', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'address', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'region', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'owner', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'unavailablePeriods', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'reservations', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'comments', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'imageName', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'imageFile', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'imageUpdatedAt'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'summary', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'description', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'capacity', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'superficy', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'price', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'address', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'region', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'owner', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'unavailablePeriods', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'reservations', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'comments'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'summary', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'description', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'capacity', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'superficy', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'price', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'address', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'region', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'owner', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'unavailablePeriods', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'reservations', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'comments', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'imageName', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'imageFile', '' . "\0" . 'App\\Entity\\Room' . "\0" . 'imageUpdatedAt'];
     }
 
     /**
@@ -362,6 +362,50 @@ class Room extends \App\Entity\Room implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setOwner', [$owner]);
 
         return parent::setOwner($owner);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setImageFile(\Symfony\Component\HttpFoundation\File\File $imageFile = NULL): void
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setImageFile', [$imageFile]);
+
+        parent::setImageFile($imageFile);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getImageFile(): ?\Symfony\Component\HttpFoundation\File\File
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getImageFile', []);
+
+        return parent::getImageFile();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setImageName(?string $imageName): void
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setImageName', [$imageName]);
+
+        parent::setImageName($imageName);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getImageName(): ?string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getImageName', []);
+
+        return parent::getImageName();
     }
 
     /**
