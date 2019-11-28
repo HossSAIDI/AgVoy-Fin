@@ -107,6 +107,18 @@ class __TwigTemplate_38edd502d014fe0effbe5d882f4dce4e082cfe61a6cab9f1abb1df26613
             // line 13
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["region"], "presentation", [], "any", false, false, false, 13), "html", null, true);
             echo "</td>
+                <td>
+                    ";
+            // line 15
+            if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
+                // line 16
+                echo "                        <a href=\"";
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("region_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["region"], "id", [], "any", false, false, false, 16)]), "html", null, true);
+                echo "\" style=\"margin-left: 100px\">Editer cette region</a>
+                    ";
+            }
+            // line 18
+            echo "                </td>
                 <br>
                
                
@@ -115,7 +127,7 @@ class __TwigTemplate_38edd502d014fe0effbe5d882f4dce4e082cfe61a6cab9f1abb1df26613
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 19
+            // line 24
             echo "            <tr>
                 <td colspan=\"5\">Aucune occurence trouvée</td>
             </tr>
@@ -124,7 +136,20 @@ class __TwigTemplate_38edd502d014fe0effbe5d882f4dce4e082cfe61a6cab9f1abb1df26613
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['region'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 23
+        // line 28
+        echo "
+        ";
+        // line 29
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
+            // line 30
+            echo "            <br>
+            <a href=\"";
+            // line 31
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("region_new");
+            echo "\">Créer une nouvelle région</a>
+        ";
+        }
+        // line 33
         echo "        </tbody>
     
 
@@ -150,7 +175,7 @@ class __TwigTemplate_38edd502d014fe0effbe5d882f4dce4e082cfe61a6cab9f1abb1df26613
 
     public function getDebugInfo()
     {
-        return array (  128 => 23,  119 => 19,  108 => 13,  102 => 12,  99 => 11,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  153 => 33,  148 => 31,  145 => 30,  143 => 29,  140 => 28,  131 => 24,  121 => 18,  115 => 16,  113 => 15,  108 => 13,  102 => 12,  99 => 11,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -168,6 +193,11 @@ class __TwigTemplate_38edd502d014fe0effbe5d882f4dce4e082cfe61a6cab9f1abb1df26613
             <tr>
                 <td><a href=\"{{ path('rooms_par_region', {'id': region.id}) }}\"> {{ region.name }}</a></td>
                 <td>{{ region.presentation }}</td>
+                <td>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <a href=\"{{ path('region_edit', {'id': region.id}) }}\" style=\"margin-left: 100px\">Editer cette region</a>
+                    {% endif %}
+                </td>
                 <br>
                
                
@@ -177,6 +207,11 @@ class __TwigTemplate_38edd502d014fe0effbe5d882f4dce4e082cfe61a6cab9f1abb1df26613
                 <td colspan=\"5\">Aucune occurence trouvée</td>
             </tr>
         {% endfor %}
+
+        {% if is_granted('ROLE_ADMIN') %}
+            <br>
+            <a href=\"{{ path('region_new') }}\">Créer une nouvelle région</a>
+        {% endif %}
         </tbody>
     
 

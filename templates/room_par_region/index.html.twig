@@ -11,6 +11,11 @@
             <tr>
                 <td><a href="{{ path('rooms_par_region', {'id': region.id}) }}"> {{ region.name }}</a></td>
                 <td>{{ region.presentation }}</td>
+                <td>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <a href="{{ path('region_edit', {'id': region.id}) }}" style="margin-left: 100px">Editer cette region</a>
+                    {% endif %}
+                </td>
                 <br>
                
                
@@ -20,6 +25,11 @@
                 <td colspan="5">Aucune occurence trouvée</td>
             </tr>
         {% endfor %}
+
+        {% if is_granted('ROLE_ADMIN') %}
+            <br>
+            <a href="{{ path('region_new') }}">Créer une nouvelle région</a>
+        {% endif %}
         </tbody>
     
 

@@ -67,7 +67,7 @@ class __TwigTemplate_7b9ef75476f561d4887963f77c8aae27a6de951869855b69a88dfc0e95e
         // line 4
         echo "
 <title>New Region</title>
-    <h1>Create new Region</h1>
+    <h1>Créer une nouvelle région</h1>
 
     ";
         // line 8
@@ -77,7 +77,7 @@ class __TwigTemplate_7b9ef75476f561d4887963f77c8aae27a6de951869855b69a88dfc0e95e
     <a href=\"";
         // line 10
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("region_index");
-        echo "\">Retour/a>
+        echo "\">Retour</a>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -109,11 +109,11 @@ class __TwigTemplate_7b9ef75476f561d4887963f77c8aae27a6de951869855b69a88dfc0e95e
 {% block body %}
 
 <title>New Region</title>
-    <h1>Create new Region</h1>
+    <h1>Créer une nouvelle région</h1>
 
     {{ include('region/_form.html.twig') }}
 
-    <a href=\"{{ path('region_index') }}\">Retour/a>
+    <a href=\"{{ path('region_index') }}\">Retour</a>
 {% endblock %}
 ", "region/new.html.twig", "/home/serandour/AgVoyFin/AgVoy-Fin/templates/region/new.html.twig");
     }
