@@ -1,6 +1,6 @@
 <?php
 
-namespace ContainerRzMqHDc;
+namespace ContainerBDxa6r8;
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -1582,6 +1582,17 @@ class srcApp_KernelDevDebugContainer extends Container
 
                                     ],
                                     'roles' => [
+
+                                    ],
+                                ],
+                                'logout' => [
+                                    'label' => 'Se déconnecter',
+                                    'route' => 'app_logout',
+                                    'roles' => [
+                                        0 => 'ROLE_USER',
+                                    ],
+                                    'is_divider' => false,
+                                    'route_parameters' => [
 
                                     ],
                                 ],

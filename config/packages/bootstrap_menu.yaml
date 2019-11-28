@@ -21,3 +21,7 @@ bootstrap_menu:
             register:
               label: "S'inscrire"
               route: 'home'
+            logout:
+              label: 'Se déconnecter'
+              route: 'app_logout'
+              roles: ["ROLE_USER"]

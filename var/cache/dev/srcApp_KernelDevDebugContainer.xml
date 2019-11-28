@@ -306,6 +306,15 @@
                 <parameter key="route_parameters" type="collection"/>
                 <parameter key="roles" type="collection"/>
               </parameter>
+              <parameter key="logout" type="collection">
+                <parameter key="label">Se déconnecter</parameter>
+                <parameter key="route">app_logout</parameter>
+                <parameter key="roles" type="collection">
+                  <parameter>ROLE_USER</parameter>
+                </parameter>
+                <parameter key="is_divider">false</parameter>
+                <parameter key="route_parameters" type="collection"/>
+              </parameter>
             </parameter>
             <parameter key="is_divider">false</parameter>
             <parameter key="route_parameters" type="collection"/>
